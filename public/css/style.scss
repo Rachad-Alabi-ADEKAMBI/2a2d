@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+$primary: #0057b7; // Ukrainian blue
+$secondary: #ffd700; // Ukrainian yellow
+$tertiary: #111111;
+$white: white;
+$wheat: wheat;
+$black: black;
+$grey: rgb(33, 37, 41); // Dark grey for dark theme
+$grey-dark: rgb(20, 24, 28); // Even darker grey
+
+@mixin flex($flex-direction: row) {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: $flex-direction;
+}
+
+html, body {
+  background-color: $grey-dark;
+  color: $white;
+  line-height: 1.6;
+  font-size: 1.1em;
+  box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $primary;
+  font-weight: bold;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+img {
+  border-radius: 5px;
+}
+
+.close:hover{
+  color: $secondary;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary;
+  
+  &:hover {
+    color: $primary;
+  }
+}
+
+.text-justify {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-yellow{
+  color: $secondary;
+}
+
+.text-white{
+  color: $white;
+}
+
+.text-primary{
+  color: $primary;
+}
+
+.text-dark{
+  color: $black;
+}
+
+.red{
+  color: red;
+  font-weight: bold;
+}
+
+.navbar{
+    background-color: $grey-dark;
+    padding-bottom: 0;
+    position: fixed;
+    width: 100%;
+    color: $white;
+    z-index: 9999;
+
+    .logo{
+        width: 90px;
+        height: 60px;
+    }
+
+}
+
+.hero {
+    height: 100vh;
+    margin: 0 auto;
+    z-index: -9999;
+    display: block;
+    background-image: linear-gradient(rgba(29, 48, 223, 0.548), rgba(92, 97, 19, 0.589)),
+     url('../images/hero.webp');
+   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 15px;
+    width: 100%;
+    padding-top: 50px;
+  
+    &__content {
+      width: 80%;
+      margin: auto;
+      height: 100%;
+      padding-top: 110px;
+      text-align: center;
+  
+      h1 {
+        font-size: 4em;
+        font-weight: 700;
+        color: $secondary;
+      }
+  
+      p {
+        margin: 40px auto;
+        font-weight: 800;
+        font-size: 1.6em;
+        color: $white;
+      }
+    }
+  }
+  
+
+.categories {
+  @include flex();
+  margin: 40px auto;
+
+  .category {
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    background-color: $grey;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1;
+    margin: 15px;
+
+    &__icon {
+      color: $secondary;
+    }
+
+    &__name {
+      color: $white;
+      font-weight: bold;
+    }
+  }
+
+  .category:hover {
+    background-color: $primary;
+
+    &__icon, &__name {
+      color: $white;
+    }
+  }
+}
+
+.about, .offers {
+  @include flex();
+  margin: 40px auto;
+  border-radius: 5px;
+
+  &__image {
+    position: relative;
+
+    .image {
+      width: 450px;
+      height: 300px;
+      margin: 35px auto auto 15px;
+      border-radius: 10px;
+      z-index: 999;
+    }
+
+    &__bg {
+      width: 55%;
+      background-color: $primary;
+      position: absolute;
+      border-radius: 10px;
+      top: 0;
+      right: 0;
+      z-index: -999;
+      height: 370px;
+    }
+  }
+
+  &__text {
+    margin: 15px auto;
+
+    strong {
+      color: $primary;
+    }
+  }
+}
+
+.services {
+  @include flex();
+  margin: 0px auto;
+
+  &__service {
+    border-radius: 10px;
+    border: 3px solid $grey;
+    background-image: linear-gradient(rgba(72, 162, 236, 0.5),
+     rgba(236, 222, 26, 0.5));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    margin: 10px;
+    flex: 1;
+    padding: 30px;
+
+    h3 {
+      margin: 30px auto;
+      color: $white;
+    }
+  }
+}
+
+.clients {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+
+  p {
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  &__list {
+    @include flex();
+
+    &__item {
+      display: block;
+      flex: 1;
+
+      .circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: $primary;
+        color: $white;
+        text-align: center;
+        display: table;
+        margin: auto;
+
+        p {
+          vertical-align: middle;
+          margin: 15px auto;
+        }
+      }
+
+      p {
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+.blog {
+  text-align: center;
+
+  h2, p {
+      width: 70%;
+      margin: auto;
+  }
+  &__items{
+   // @include flex();
+
+    &__item{
+        border-radius: 5px;
+          border: 3px solid $grey;
+          position: relative;
+          background-color: $grey;
+          padding: 35px;
+          margin: 10px;
+
+          h3{
+              width: 90%;
+              margin: auto;
+            }
+
+          p{
+            width: 90%;
+            margin: 10px auto;
+          }
+
+          .date {
+            position: absolute;
+            border-radius: 5px;
+            top: 115px;
+            right: -30px;
+            height: 90px;
+            width: 70px;
+            background-color: $secondary;
+            text-align: center;
+            color: $black;
+            font-weight: bold;
+        }
+    }
+  }
+}
+
+
+
+
+
+
+
+.documents {
+  &__list {
+  //  @include flex();
+
+    &__item {
+      cursor: pointer;
+      color: $white;
+      border-radius: 5px;
+      border: 2px solid $grey;
+      padding: 8px;
+     // flex: 1;
+      margin: 5px auto;
+
+      h3 {
+        color: $white;
+      }
+
+      &:hover {
+        color: $secondary;
+
+        h3{
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+.team {
+  margin: auto;
+  @include flex();
+
+  &__member {
+    border-radius: 5px;
+    background-color: $grey;
+    border: 1px solid $grey;
+    margin: 15px;
+    width: 340px;
+    padding-bottom: 10px;
+
+    img {
+      width: 300px;
+      height: 230px;
+      margin: 5px auto;
+    }
+
+    .links {
+      i {
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $tertiary;
+  color: $white;
+  padding: 60px 30px;
+
+  i {
+    color: $primary;
+    margin-right: 5px;
+  }
+
+  &__items {
+    @include flex();
+
+    &__item {
+      display: block;
+      padding: 0 30px;
+      flex: 1;
+
+      h4 {
+        color: $secondary;
+      }
+
+      ul {
+        margin: 20px auto;
+
+        li {
+          margin: 15px auto;
+          color: $white;
+
+          i {
+            margin-right: 10px;
+          }
+
+          a {
+            color: $white;
+
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+
+      .footer__gallery {
+        @include flex();
+        padding-right: 15px;
+
+        img {
+          width: 80px;
+          height: 60px;
+          border-radius: 10px;
+          margin: 5px;
+          border: 5px solid $white;
+        }
+      }
+    }
+  }
+
+  hr {
+    width: 80%;
+    margin: 20px auto;
+    height: 1px;
+    background-color: $white;
+  }
+
+  &__bottom {
+    margin: 25px auto;
+
+    .text {
+      text-align: center;
+      color: $white;
+
+      p {
+        text-align: center;
+
+        strong {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+/*responsive*/
+@media (max-width: 575px) {
+  html, body{
+   // overflow: hidden;
+  }
+
+  .hero{
+    height: 140vh;
+    width: 100%;
+  }
+
+  .about{
+    text-align: center;
+
+    h2{
+      margin: auto auto auto 15px;
+    }
+
+    &__image{
+      img{
+        width: 330px;
+        margin: auto;
+      }
+    }
+
+
+    &__text{
+      .btn{
+        margin: auto;
+      }
+    }
+  }
+
+  .services{
+    &__service{
+      padding: 8px;
+    }
+  }
+
+  .blog{
+      &__items{
+          &__item{
+            .date{
+              top: 220px;
+            }
+          }
+      }
+  }
+
+  
+}
+
+
