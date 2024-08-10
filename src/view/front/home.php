@@ -10,13 +10,13 @@ ob_start();
                 <div class="col-sm-12 col-md-8 mx-auto">
                     <div class="hero__content animate__animated animate__backInLeft animate__delay-1s">
                         <h1 class="title">
-                            CLAN
+                            2A2D
                         </h1>
                         <p class="text text-white fw-bold">
-                        Elevate your gameplay and conquer the battlefield with CLAN CLUB: a premier LOTR community.
+                        Organisation Non Gouvernementale d'Actions Africaine pour le Développement Durable (ONG 2A2D)
                         </p>
-                        <a class="btn btn-primary" href="https://discord.gg/8CcVJpES">
-                        Join CLAN club
+                        <a class="btn btn-primary" href="index.php?action=contactPage">
+                            Contact
                         </a>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ ob_start();
         <div class="container mt-5" id='about'>
             <div class="row about">
                 <div class="col-sm-12 col-md-6 about__text  animate__animated animate__backInLeft animate__delay-1s">
-                    <h2>About us</h2>
+                    <h2>A-propos</h2>
                     <div>
                         <p class="text-left">
                             We are a community of dedicated players who value teamwork, strategy, and a competitive edge, but above all, we prioritize having fun.

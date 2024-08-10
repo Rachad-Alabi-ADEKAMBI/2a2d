@@ -84,7 +84,7 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
     else {
        ?>
             <script>
-              alert('URL-адреса недійсна, перевірте її!');
+              alert('Page introuvable, veuillez vérifier cette url !');
               window.history.back();
               exit();
             </script>
