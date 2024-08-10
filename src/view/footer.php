@@ -1,6 +1,7 @@
  <!-- Footer Start -->
  <footer class="footer mt-5">
                 <div class="footer__items">
+                                   
                                     <div class="footer__items__item">
                                         <h4>
                                         Contact
@@ -8,34 +9,47 @@
 
                                         <ul>
                                             <li>
-                                            <i class="bi bi-envelope"></i> support@clan.eu                                   </li>
+                                            <i class="bi bi-envelope"></i> contact@2a2d.com    
+                                           </li>
+
+                                           <li>
+                                            <i class="bi bi-phone"></i> +229 96 83 16 26 
+                                           </li>
+
+                                           <li>
+                                            <i class="bi bi-whatsapp"></i> +229 96 83 16 26    
+                                           </li>
 
                                             <li>
-                                            <i class="bi bi-telegram"></i> @clan
+                                            <i class="bi bi-facebook"></i> ong 2A2D
                                             </li>
                                         </ul>
                                     </div>
 
                                     <div class="footer__items__item">
                                         <h4>
-                                            Links
+                                            Liens utiles
                                         </h4>
 
                                         <ul>
-                                            <li><a href="index.php?action=home">Home</a></li>
-                                            <li><a href="index.php?action=home#about">About</a></li>
-                                            <li><a href="index.php?action=home#contact">Contact</a></li>
+                                            <li><a href="index.php?action=home">Accueil</a></li>
+                                            <li><a href="index.php?action=aboutPage">A-propos</a></li>
+                                            <li><a href="index.php?action=eventsPage">Evènements</a></li>
+                                            <li><a href="index.php?action=teamPage">Equipe</a></li>
+                                            <li><a href="index.php?action=home#contactPage">Contact</a></li>
                                         </ul>
                                     </div>
 
                                     <div class="footer__items__item">
                                         <h4>
-                                            Become a member
+                                            Newsletters
                                         </h4>
-
-                                        <ul>
-                                            <li><a href="https://discord.gg/8CcVJpES">Join now</a></li>
-                                        </ul>
+                                        <div class="newsletters">
+                                            <label for="">
+                                                <input type="email">
+                                                <button type="submit" class="btn btn-primary mt-2">Souscrire</button>
+                                            </label>
+                                        </div>
                                     </div>
 
                                </div>
@@ -44,9 +58,9 @@
                             <div class="footer__bottom">
                                 <div class="text text-center">
                                 <p class="text-center">
-                                        © CLAN, 2024 <br>
+                                        © ONG 2A2D, 2024 <br>
                                         <p class="text-yellow">
-                                            All rights reserved
+                                            Tous droits réservés
                                         </p>
                                     </p>
 

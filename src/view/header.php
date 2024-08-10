@@ -1,27 +1,33 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <a class="navbar-brand" href="index.php">
-    <img src="public/images/logo_clan.png" class='logo' alt="clan LOTR game">
+    <img src="public/images/logo.png" class='logo' alt="ong 2A2D">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon text-white"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto">
+  <div class="collapse navbar-collapse mr-0" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-0">
 
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.php?action=home">Home</a>
+        <a class="nav-link text-white" href="index.php?action=home">Accueil</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.php?action=homee#about">About</a>
+        <a class="nav-link text-white" href="index.php?action=aboutPage">A-propos</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.php?action=home#contact">Contact</a>
+        <a class="nav-link text-white" href="index.php?action=teamPage">Equipe</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white" href="index.php?action=eventsPage">Evènements</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white" href="index.php?action=home#contactPage">Contact</a>
       </li>
     </ul>
-
-      <a class="btn btn-outline-success mr-3 my-sm-0" href="https://discord.gg/8CcVJpES">Join CLAN club</a>
   </div>
 </nav>

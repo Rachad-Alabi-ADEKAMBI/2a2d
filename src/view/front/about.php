@@ -13,15 +13,18 @@
                 <div class="container mt-5">
                 <div class="row about">
                     <div class="col-sm-12 col-md-6 about__text">
-                        <h2>Хто ми?</h2>
+                        <h2>Qui sommes nous ?</h2>
                         <div>
                             <p class="text-left">
-                                GEU (Gas & Electricity Supply) базується в Україні та спеціалізується на реалізації проектів в енергетичній промисловості України. Компанія поєднує в собі великий досвід управління, глибоке розуміння місцевого ринку та визнану експертизу в енергетичному секторі.
+                            L'ONG 2A2D est une organisation dévouée à la transformation sociale et au 
+                            développement durable, axée sur l'amélioration des conditions de vie des communautés
+                             défavorisées. Nous croyons en un avenir où chaque individu a la possibilité de s'épanouir, 
+                             indépendamment de son contexte socio-économique. Grâce à des initiatives variées 
+                             et une approche collaborative, 2A2D œuvre pour un monde plus juste, plus égalitaire,
+                              et plus respectueux de l'environnement. Notre engagement profond et notre volonté de
+                               changement sont au cœur de toutes nos actions, visant à bâtir
+                            une société où chacun a sa place et peut contribuer positivement au progrès collectif.
                             </p>
-                            <a href="index.php?action=aboutPage"
-                            class="btn btn-primary mx-auto">
-                                Дізнатися більше
-                            </a>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 about__image">
@@ -43,15 +46,21 @@
 
                     <div class="col-sm-12 col-md-6 offers__text">
                         <h2>
-                             Наша Візія
+                             Nos objectifs
                         </h2>
 
                         <div class="mt-4">
-                            <P>
-                            У GEU (Газ та Електропостачання) наша візія — змінити енергетичний ландшафт України, пропонуючи інноваційні та стійкі рішення. Ми прагнемо відповісти на сучасні енергетичні виклики, диверсифікуючи наші джерела енергії та модернізуючи інфраструктуру для більш безпечного та екологічного енергетичного майбутнього. З повною відданістю інноваціям та стійкості, ми прагнемо стати незаперечним лідером у постачанні надійної та відповідальної енергії по всій території України.
-
-
-                            </P>
+                            <p>
+                                <ul>
+                                    <li>Éradiquer la pauvreté à travers une entraide aux familles pauvres afin de peur permettre de mener une activité pérenne génératrice de revenus ;</li>
+                                    <li>Permettre à tous les enfants d’accéder à une éducation scolaire de qualité et éviter les décrochages en les accompagnant ;</li>
+                                    <li> Promouvoir l’égalité des genres afin que les rôles des femmes dans nos sociétés ne soient plus que domestiques ;</li>
+                                    <li>Faciliter le recours aux énergies renouvelables ;</li>
+                                    <li>Sensibiliser la jeunesse à l’accès à un travail décent ;</li>
+                                    <li>Faire des propositions de reformes du système éducatif en mettant au cœur des programmes de formation l’innovation technologique ;</li>
+                                    <li>Lutter contre le changement climatique avec des actions contre les causes et les conséquences du réchauffement climatique.</li>
+                                </ul>
+                            </p>
                         </div>
                     </div>
                 </div>

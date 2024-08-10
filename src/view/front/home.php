@@ -1,5 +1,5 @@
 <?php 
-$title = "CLAN - a premier LOTR community";
+$title = "2A2D - Organisation Non Gouvernementale d'Actions Africaine pour le Développement Durable (ONG 2A2D)";
 ob_start(); 
 ?>
 <section class='section'>
@@ -70,16 +70,21 @@ ob_start();
                     <h2>A-propos</h2>
                     <div>
                         <p class="text-left">
-                            We are a community of dedicated players who value teamwork, strategy, and a competitive edge, but above all, we prioritize having fun.
-
-                            <br> Join us to experience top-tier leadership and gameplay in the Lord of the Rings: Rise to War.
-
-                            <br> The game can be intense and demanding, and winning requires significant time and effort. That's why it's essential to play with like-minded individuals who enhance the gaming experience.
+                        L'ONG 2A2D est une organisation dévouée à la transformation sociale et au développement durable, 
+                        axée sur l'amélioration des conditions de vie des communautés défavorisées. Nous croyons en un avenir
+                         où chaque individu a la possibilité de s'épanouir, indépendamment de son contexte socio-économique.
+                          Grâce à des initiatives variées et une approche collaborative, 2A2D œuvre pour un monde plus juste,
+                           plus égalitaire, et plus respectueux de l'environnement. Notre engagement profond et notre volonté de changement sont au cœur de toutes nos actions, 
+                        visant à bâtir une société où chacun a sa place et peut contribuer positivement au progrès collectif.
                         </p>
+
+                        <a href="index.php?action=aboutPage">
+                            A-propos
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 about__image">
-                    <img src="public/images/war-game.webp" alt="CLAN club" class="image img-fluid">
+                    <img src="public/images/war-game.webp" alt="ong 2A2D" class="image img-fluid">
                     <div class="about__image__bg"></div>
                 </div>
             </div>
