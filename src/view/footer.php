@@ -34,7 +34,7 @@
                                         <ul>
                                             <li><a href="index.php?action=home">Accueil</a></li>
                                             <li><a href="index.php?action=aboutPage">A-propos</a></li>
-                                            <li><a href="index.php?action=eventsPage">Evènements</a></li>
+                                            <li><a href="index.php?action=projectsPage">Projets</a></li>
                                             <li><a href="index.php?action=teamPage">Equipe</a></li>
                                             <li><a href="index.php?action=home#contactPage">Contact</a></li>
                                         </ul>
@@ -46,7 +46,7 @@
                                         </h4>
                                         <div class="newsletters">
                                             <label for="">
-                                                <input type="email">
+                                                <input type="email"> <br>
                                                 <button type="submit" class="btn btn-primary mt-2">Souscrire</button>
                                             </label>
                                         </div>

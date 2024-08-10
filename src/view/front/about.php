@@ -1,11 +1,11 @@
-<?php $title = "ГРУ - Про";
+<?php $title = "2A2D - A-propos";
 
 // $articles
 
  ob_start(); ?>
     <section class='section mt-5' >
     <h1 class="text-center">
-             Про
+             A-propos
     </h1>
        
 
@@ -46,7 +46,7 @@
 
                     <div class="col-sm-12 col-md-6 offers__text">
                         <h2>
-                             Nos objectifs
+                             Objectifs spécifiques
                         </h2>
 
                         <div class="mt-4">
