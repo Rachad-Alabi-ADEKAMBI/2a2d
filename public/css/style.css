@@ -83,7 +83,7 @@ a:hover {
   margin: 0 auto;
   z-index: -9999;
   display: block;
-  background-image: linear-gradient(rgba(29, 48, 223, 0.548), rgba(92, 97, 19, 0.589)), url("http://127.0.0.1/2a2d/public/images/test1.png");
+  background-image: linear-gradient(rgba(29, 48, 223, 0.548), rgba(92, 97, 19, 0.589)), url("http://127.0.0.1/2a2d/public/images/hero1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

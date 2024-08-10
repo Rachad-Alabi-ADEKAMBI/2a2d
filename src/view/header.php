@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <a class="navbar-brand" href="index.php">
-    <img src="public/images/logo.png" class='logo' alt="ong 2A2D">
+    <img src="public/images/logo.jpg" class='logo' alt="ong 2A2D">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon text-white"></span>
@@ -22,11 +22,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.php?action=projetsPage">Projets</a>
+        <a class="nav-link text-white" href="index.php?action=projectsPage">Projets</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.php?action=home#contactPage">Contact</a>
+        <a class="nav-link text-white" href="index.php?action=home#contact">Contact</a>
       </li>
     </ul>
   </div>

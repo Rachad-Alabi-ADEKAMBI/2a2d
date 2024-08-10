@@ -36,7 +36,7 @@
                                             <li><a href="index.php?action=aboutPage">A-propos</a></li>
                                             <li><a href="index.php?action=projectsPage">Projets</a></li>
                                             <li><a href="index.php?action=teamPage">Equipe</a></li>
-                                            <li><a href="index.php?action=home#contactPage">Contact</a></li>
+                                            <li><a href="index.php?action=home#contact">Contact</a></li>
                                         </ul>
                                     </div>
 

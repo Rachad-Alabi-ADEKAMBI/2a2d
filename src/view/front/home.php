@@ -72,9 +72,8 @@ ob_start();
                         <p class="text-left">
                         L'ONG 2A2D est une organisation dévouée à la transformation sociale et au développement durable, 
                         axée sur l'amélioration des conditions de vie des communautés défavorisées. Nous croyons en un avenir
-                         où chaque individu a la possibilité de s'épanouir, indépendamment de son contexte socio-économique.
-                          Grâce à des initiatives variées et une approche collaborative, 2A2D œuvre pour un monde plus juste,
-                           plus égalitaire, et plus respectueux de l'environnement.
+                         où chaque individu a la possibilité de s'épanouir, indépendamment de son contexte socio-économique ...
+                          
                         </p>
 
                         <a href="index.php?action=aboutPage"
@@ -84,7 +83,7 @@ ob_start();
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 about__image">
-                    <img src="public/images/war-game.webp" alt="ong 2A2D" class="image img-fluid">
+                    <img src="public/images/hero2.jpg" alt="ong 2A2D" class="image img-fluid">
                     <div class="about__image__bg"></div>
                 </div>
             </div>

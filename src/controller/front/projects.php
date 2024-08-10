@@ -1,9 +1,9 @@
 <?php
 //require_once './src/model/front/home.php';
 
-function blogPage()
+function projectsPage()
 {
    // $posts = sixAds();
 
-    require './src/view/front/blog.php';
+    require './src/view/front/projects.php';
 }
