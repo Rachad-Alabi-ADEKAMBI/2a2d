@@ -3,33 +3,13 @@
 $action = $_GET['action'] ?? '';
 
 
-if ($action == 'newDoc') {
-   newDoc();
+if ($action == 'subscribe') {
+   subscribe();
 }
 
-if ($action == 'allDocs') {
-        getAllDocs();
+if ($action == 'newsletters') {
+    newsletters();
  }
-
- if ($action == 'simpleDocs') {
-    getSimpleDocs();
-}
-
-if ($action == 'gasDocs') {
-    getGasDocs();
-}
-
-if ($action == 'electricityDocs') {
-    getElectricityDocs();
-}
-
-if ($action == 'deleteDoc') {
-    deleteDoc($id);
-}
-
-if($action == 'login'){
-    login();
-}
 
 if($action == 'logout'){
     logout();
