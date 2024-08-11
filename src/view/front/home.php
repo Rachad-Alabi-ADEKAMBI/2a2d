@@ -182,25 +182,30 @@ ob_start();
             <div class="row blog__items mt-3">
                 <div class="col-sm-12 col-md-6 mb-3">
                     <div class="blog__items__item">
-                        <h3>
-                            Potager bio et biogaz au service de l'environnement (Août 2024 - Août 2025)
-                        </h3>
+                        <img src="public/images/biogaz2.jpg" alt="ong 2a2d">
+                        <h4>
+                            Potager bio et biogaz au service de l'environnement 
+                        </h4>
                         <p class="text-left mt-4">
                             Ce projet vise à promouvoir l'agriculture durable et la production de biogaz en utilisant des techniques respectueuses de l'environnement. Nous mettons en place des potagers bio pour améliorer l'autosuffisance alimentaire et réduire les déchets organiques.
                         </p>
-                        <a href="index.php?action=project/1" class="btn btn-primary mx-auto mt-4">
+                        <a href="index.php?action=project&id=1" class="btn btn-primary mx-auto mt-4">
                             En savoir plus
                         </a>
                         <div class="date text-center pt-4">
-                            <i class="bi bi-leaf"></i>
+                            <i class="bi bi-calendar"></i> <br>
+                            <p>
+                            Août 2024  <br> Août 2025
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 mb-3">
                     <div class="blog__items__item">
-                        <h3>
-                            Don de sacs d'ordinateur vide à 9 nouveaux bacheliers (Septembre 2023)
-                        </h3>
+                    <img src="public/images/logo_big.jpg" alt="ong 2a2d">
+                        <h4>
+                            Don de sacs d'ordinateur vide à 9 nouveaux bacheliers
+                        </h4>
                         <p class="text-left">
                             Ce projet a pour objectif de soutenir les nouveaux bacheliers en leur fournissant des sacs d'ordinateur pour faciliter leur accès aux outils numériques nécessaires pour leurs études. Une contribution significative à leur réussite académique et professionnelle.
                         </p>
@@ -208,7 +213,8 @@ ob_start();
                             En savoir plus
                         </a>
                         <div class="date pt-4">
-                            <i class="bi bi-bag-check"></i>
+                            <i class="bi bi-bag-calendar"></i> <br>
+                            <p>Sep 2023 </p>
                         </div>
                     </div>
                 </div>

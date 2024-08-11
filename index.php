@@ -13,6 +13,7 @@ require_once 'src/controller/front/team.php';
 require_once 'src/controller/front/career.php';
 require_once 'src/controller/front/documents.php';
 require_once 'src/controller/front/projects.php';
+require_once 'src/controller/front/project.php';
 require_once 'src/controller/front/faq.php';
 require_once 'src/controller/front/login.php';
 require_once 'src/controller/front/gas.php';
@@ -55,6 +56,10 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
 
     elseif ($_GET['action'] === 'projectsPage') {
       projectsPage();
+    }
+
+    elseif ($_GET['action'] === 'projectPage') {
+      projectPage();
     }
 
     elseif ($_GET['action'] === 'faqPage') {

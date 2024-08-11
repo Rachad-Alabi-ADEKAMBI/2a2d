@@ -253,9 +253,13 @@ a:hover {
   padding: 35px;
   margin: 10px;
 }
-.blog__items__item h3 {
+.blog__items__item img {
   width: 90%;
   margin: auto;
+}
+.blog__items__item h4 {
+  width: 90%;
+  margin: 10px auto;
 }
 .blog__items__item p {
   width: 90%;
