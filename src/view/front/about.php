@@ -13,6 +13,7 @@
             <div class="row about">
                 <div class="col-sm-12 col-md-6 about__image  animate__animated animate__backInLeft animate__delay-1s">
                     <img src="public/images/hero2.jpg" alt="ong 2A2D" class="image img-fluid">
+                    <div class="about__image__bg"></div>
                 </div>
                 <div class="col-sm-12 col-md-6 about__text  animate__animated animate__backInRight animate__delay-1s pt-4">
                     <h2>Qui sommmes nous ?</h2>
@@ -46,6 +47,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 about__image  animate__animated animate__backInRight animate__delay-1s">
                     <img src="public/images/logo_big.jpg" alt="ong 2A2D" class="image img-fluid">
+                    <div class="about__image__bg"></div>
                 </div>
             </div>
         </div>

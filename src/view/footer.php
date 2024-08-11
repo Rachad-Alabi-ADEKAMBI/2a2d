@@ -9,7 +9,7 @@
 
                                         <ul>
                                             <li>
-                                            <i class="bi bi-envelope"></i> contact@2a2d.com    
+                                            <i class="bi bi-envelope"></i> mail@2a2d.com    
                                            </li>
 
                                            <li>

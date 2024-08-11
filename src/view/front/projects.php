@@ -19,7 +19,7 @@
             <hr>
             <h3>Projets phare</h3>
             <div class="row blog__items mt-3 text-center">
-                <div class="col-sm-12 col-md-6 mb-3 text-center">
+                <div class="col-sm-12 col-md-6 mx-auto mb-3 text-center">
                     <div class="blog__items__item mx-auto text-center">
                         <img src="public/images/biogaz2.jpg" alt="ong 2a2d">
                         <h4>

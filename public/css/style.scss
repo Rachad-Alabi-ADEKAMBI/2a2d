@@ -307,12 +307,13 @@ a {
 .blog {
   text-align: center;
 
-  h2, p {
+  h2 {
       width: 70%;
       margin: auto;
   }
   &__items{
    // @include flex();
+   text-align: center;
 
     &__item{
         border-radius: 5px;
@@ -354,39 +355,6 @@ a {
 }
 
 
-
-
-
-
-
-.documents {
-  &__list {
-  //  @include flex();
-
-    &__item {
-      cursor: pointer;
-      color: $white;
-      border-radius: 5px;
-      border: 2px solid $grey;
-      padding: 8px;
-     // flex: 1;
-      margin: 5px auto;
-
-      h3 {
-        color: $white;
-      }
-
-      &:hover {
-        color: $secondary;
-
-        h3{
-          color: $secondary;
-        }
-      }
-    }
-  }
-}
-
 .team {
   margin: auto;
   @include flex();
@@ -396,8 +364,10 @@ a {
     background-color: $grey;
     border: 1px solid $grey;
     margin: 15px;
-    width: 340px;
+    width: 335px;
     padding-bottom: 10px;
+    text-align: center;
+    padding-top: 5px;
 
     img {
       width: 300px;
@@ -561,11 +531,27 @@ a {
     }
   }
 
+  .team{
+    &__member{
+      width: 330px;
+      margin: 5px;
+      text-align: center;
+
+      img{
+        width: 280px;
+        margin: auto;
+      }
+    }
+  }
+
   .blog{
       &__items{
           &__item{
             .date{
-              top: 10px;
+              top: 170px;
+              font-size: 0.8em;
+              width: 65px;
+              right: -10px;
             }
           }
       }

@@ -267,9 +267,12 @@ a:hover {
 .blog {
   text-align: center;
 }
-.blog h2, .blog p {
+.blog h2 {
   width: 70%;
   margin: auto;
+}
+.blog__items {
+  text-align: center;
 }
 .blog__items__item {
   border-radius: 5px;
@@ -304,24 +307,6 @@ a:hover {
   font-weight: bold;
 }
 
-.documents__list__item {
-  cursor: pointer;
-  color: white;
-  border-radius: 5px;
-  border: 2px solid rgb(33, 37, 41);
-  padding: 8px;
-  margin: 5px auto;
-}
-.documents__list__item h3 {
-  color: white;
-}
-.documents__list__item:hover {
-  color: #EA4033;
-}
-.documents__list__item:hover h3 {
-  color: #EA4033;
-}
-
 .team {
   margin: auto;
   display: flex;
@@ -334,8 +319,10 @@ a:hover {
   background-color: rgb(33, 37, 41);
   border: 1px solid rgb(33, 37, 41);
   margin: 15px;
-  width: 340px;
+  width: 335px;
   padding-bottom: 10px;
+  text-align: center;
+  padding-top: 5px;
 }
 .team__member img {
   width: 300px;
@@ -458,7 +445,19 @@ a:hover {
   .services__service {
     padding: 8px;
   }
+  .team__member {
+    width: 330px;
+    margin: 5px;
+    text-align: center;
+  }
+  .team__member img {
+    width: 280px;
+    margin: auto;
+  }
   .blog__items__item .date {
-    top: 10px;
+    top: 170px;
+    font-size: 0.8em;
+    width: 65px;
+    right: -10px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -5,9 +5,9 @@ function getConnexion()
 {
     try {
         return new PDO(
-            'mysql:host=localhost;dbname=id22223827_immobilier_benin;charset=UTF8',
-            'id22223827_immobilier_benin',
-            'Immobilier_benin92i?'
+            'mysql:host=sql307.infinityfree.com;dbname=if0_37074155_2a2d;charset=UTF8',
+            'if0_37074155',
+            'Jep4h9xYoBkO'
         );
     } catch (PDOException $e) {
         // Handle database connection error
