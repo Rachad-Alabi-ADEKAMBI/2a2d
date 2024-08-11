@@ -1,4 +1,4 @@
-<?php $title = "GRU - панель адміністратора";
+<?php $title = "ong 2A2D - Tableau de bord admin";
 
 // $articles
 
@@ -20,11 +20,9 @@
             </div>
         </div>
         end menu-->
-        
-
 
         <!--documents-->
-                <div class="col-sm-12 col-md-8 text-center mx-auto" v-if="showDocs">
+                <div class="col-sm-12 col-md-8 text-center mx-auto" v-if="showAll">
                         <h2 class="mt-2">
                         Liste des emails newsletters
                         </h2>

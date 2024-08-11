@@ -12,8 +12,23 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #0057b7;
+  color: #56A866;
   font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #56A866;
+  border: 1px solid #56A866;
+}
+
+.btn-primary:hover {
+  background-color: #EA4033;
+  border: 1px solid #EA4033;
+}
+
+a:hover {
+  color: #EA4033;
+  text-decoration: none;
 }
 
 ul li {
@@ -25,15 +40,15 @@ img {
 }
 
 .close:hover {
-  color: #ffd700;
+  color: #EA4033;
 }
 
 a {
   text-decoration: none;
-  color: #ffd700;
+  color: #EA4033;
 }
 a:hover {
-  color: #0057b7;
+  color: #56A866;
 }
 
 .text-justify {
@@ -45,7 +60,7 @@ a:hover {
 }
 
 .text-yellow {
-  color: #ffd700;
+  color: #EA4033;
 }
 
 .text-white {
@@ -53,7 +68,7 @@ a:hover {
 }
 
 .text-primary {
-  color: #0057b7;
+  color: #56A866;
 }
 
 .text-dark {
@@ -66,16 +81,18 @@ a:hover {
 }
 
 .navbar {
-  background-color: rgb(20, 24, 28);
   padding-bottom: 0;
   position: fixed;
   width: 100%;
   color: white;
   z-index: 9999;
+  margin-bottom: 5px;
 }
 .navbar .logo {
-  width: 90px;
-  height: 60px;
+  border-radius: 30px;
+}
+.navbar .nav-link:hover {
+  color: #56A866;
 }
 
 .hero {
@@ -83,13 +100,14 @@ a:hover {
   margin: 0 auto;
   z-index: -9999;
   display: block;
-  background-image: linear-gradient(rgba(29, 48, 223, 0.548), rgba(92, 97, 19, 0.589)), url("http://127.0.0.1/2a2d/public/images/hero1.jpg");
+  background-image: linear-gradient(rgba(124, 173, 137, 0.548), rgba(92, 59, 46, 0.589)), url("../images/hero1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 15px;
   width: 100%;
   padding-top: 50px;
+  overflow: hidden;
 }
 .hero__content {
   width: 80%;
@@ -101,7 +119,7 @@ a:hover {
 .hero__content h1 {
   font-size: 4em;
   font-weight: 700;
-  color: #ffd700;
+  color: #EA4033;
 }
 .hero__content p {
   margin: 40px auto;
@@ -129,14 +147,14 @@ a:hover {
   margin: 15px;
 }
 .categories .category__icon {
-  color: #ffd700;
+  color: #EA4033;
 }
 .categories .category__name {
   color: white;
   font-weight: bold;
 }
 .categories .category:hover {
-  background-color: #0057b7;
+  background-color: #56A866;
 }
 .categories .category:hover__icon, .categories .category:hover__name {
   color: white;
@@ -162,7 +180,7 @@ a:hover {
 }
 .about__image__bg, .offers__image__bg {
   width: 55%;
-  background-color: #0057b7;
+  background-color: #56A866;
   position: absolute;
   border-radius: 10px;
   top: 0;
@@ -174,7 +192,7 @@ a:hover {
   margin: 15px auto;
 }
 .about__text strong, .offers__text strong {
-  color: #0057b7;
+  color: #56A866;
 }
 
 .services {
@@ -224,7 +242,7 @@ a:hover {
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background-color: #0057b7;
+  background-color: #56A866;
   color: white;
   text-align: center;
   display: table;
@@ -272,7 +290,7 @@ a:hover {
   right: -30px;
   height: 90px;
   width: 70px;
-  background-color: #ffd700;
+  background-color: #EA4033;
   text-align: center;
   color: black;
   font-weight: bold;
@@ -290,10 +308,10 @@ a:hover {
   color: white;
 }
 .documents__list__item:hover {
-  color: #ffd700;
+  color: #EA4033;
 }
 .documents__list__item:hover h3 {
-  color: #ffd700;
+  color: #EA4033;
 }
 
 .team {
@@ -321,12 +339,12 @@ a:hover {
 }
 
 .footer {
-  background-color: #111111;
+  background-color: rgb(33, 37, 41);
   color: white;
   padding: 60px 30px;
 }
 .footer i {
-  color: #0057b7;
+  color: #56A866;
   margin-right: 5px;
 }
 .footer__items {
@@ -341,7 +359,7 @@ a:hover {
   flex: 1;
 }
 .footer__items__item h4 {
-  color: #ffd700;
+  color: #56A866;
 }
 .footer__items__item ul {
   margin: 20px auto;
@@ -357,7 +375,7 @@ a:hover {
   color: white;
 }
 .footer__items__item ul li a:hover {
-  color: #ffd700;
+  color: #EA4033;
 }
 .footer__items__item .footer__gallery {
   display: flex;
@@ -388,9 +406,11 @@ a:hover {
 }
 .footer__bottom .text p {
   text-align: center;
+  color: #56A866;
+  font-weight: bold;
 }
 .footer__bottom .text p strong {
-  color: #0057b7;
+  color: white;
 }
 
 /*responsive*/

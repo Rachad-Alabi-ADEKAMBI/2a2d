@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-
-$primary: #0057b7; // Ukrainian blue
-$secondary: #ffd700; // Ukrainian yellow
-$tertiary: #111111;
+$primary: #56A866; // Ukrainian blue
+$secondary:  #EA4033; // Ukrainian yellow
+$tertiary: #F7BB39;
 $white: white;
-$wheat: wheat;
+$wheat: #F9F9F9;
 $black: black;
 $grey: rgb(33, 37, 41); // Dark grey for dark theme
 $grey-dark: rgb(20, 24, 28); // Even darker grey
@@ -32,6 +31,21 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   color: $primary;
   font-weight: bold;
+}
+
+.btn-primary{
+  background-color: $primary;
+  border: 1px solid $primary;
+}
+
+.btn-primary:hover{
+  background-color: $secondary;
+  border: 1px solid $secondary;
+}
+
+a:hover{
+  color: $secondary;
+  text-decoration: none;
 }
 
 ul {
@@ -87,16 +101,22 @@ a {
 }
 
 .navbar{
-    background-color: $grey-dark;
+   // background-color: $grey-dark;
     padding-bottom: 0;
     position: fixed;
     width: 100%;
     color: $white;
     z-index: 9999;
+    margin-bottom: 5px;
 
     .logo{
-        width: 90px;
-        height: 60px;
+     //   width: 0px;
+       // height: 60px;
+       border-radius: 30px;
+    }
+
+    .nav-link:hover{
+        color: $primary;
     }
 
 }
@@ -106,14 +126,15 @@ a {
     margin: 0 auto;
     z-index: -9999;
     display: block;
-    background-image: linear-gradient(rgba(29, 48, 223, 0.548), rgba(92, 97, 19, 0.589)),
-     url('http://127.0.0.1/2a2d/public/images/hero1.jpg');
+    background-image: linear-gradient(rgba(124, 173, 137, 0.548), rgba(92, 59, 46, 0.589)),
+     url('../images/hero1.jpg');
    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 15px;
     width: 100%;
     padding-top: 50px;
+    overflow: hidden;
   
     &__content {
       width: 80%;
@@ -383,7 +404,7 @@ a {
 }
 
 .footer {
-  background-color: $tertiary;
+  background-color: $grey;
   color: $white;
   padding: 60px 30px;
 
@@ -401,7 +422,7 @@ a {
       flex: 1;
 
       h4 {
-        color: $secondary;
+        color: $primary;
       }
 
       ul {
@@ -456,9 +477,11 @@ a {
 
       p {
         text-align: center;
+        color: $primary;
+        font-weight: bold;
 
         strong {
-          color: $primary;
+          color: $white;
         }
       }
     }

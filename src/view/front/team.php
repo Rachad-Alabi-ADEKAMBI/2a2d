@@ -20,7 +20,7 @@
 
             <div class="row g-0 gx-5 align-items-end team mt-2">
                 <div class="col-sm-12 col-md-4 team__member">
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <img src="public/images/user1.jpg" alt="">
                     <span>HOWATANNOU Florence</span> <br>
                     <strong class="text-yellow">
                         Présidente
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-4 team__member">
-                    <img src="https://plus.unsplash.com/premium_photo-1661589856899-6dd0871f9db6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <img src="public/images/user2.jpg" alt="">
                     <span>TOPLONOU Isabelle</span> <br>
                     <strong class="text-yellow">
                         Vice-présidente
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-4 team__member">
-                    <img src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <img src="public/images/user3.jpg" alt="">
                     <span>PEDRO A. Bricea</span> <br>
                     <strong class="text-yellow">
                         Trésorier général
@@ -70,7 +70,7 @@
 
             <row class="g-0 gx-5 align-items-end team mt-2">
             <div class="col-sm-12 col-md-4 team__member">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <img src="public/images/user4.jpg" alt="">
                 <span>BADOU Berlissee</span> <br>
                 <strong class="text-yellow">
                     Chargée de ressources humaines
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 team__member">
-                <img src="https://plus.unsplash.com/premium_photo-1661589856899-6dd0871f9db6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <img src="public/images/user5.jpg" alt="">
                 <span>BONOU Sylvie</span> <br>
                 <strong class="text-yellow">
                     Sécrétaire <br> adjointe
@@ -102,7 +102,7 @@
             </div>
 
             <div class="col-sm-12 col-md-4 team__member">
-                <img src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <img src="public/images/user6.jpg" alt="">
                 <span>OGOUVIDE T. Ghislain Roméo </span> <br>
                 <strong class="text-yellow">
                     Chargé programmes de projets

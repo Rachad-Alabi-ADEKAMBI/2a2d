@@ -189,7 +189,7 @@ ob_start();
                         <p class="text-left mt-4">
                             Ce projet vise à promouvoir l'agriculture durable et la production de biogaz en utilisant des techniques respectueuses de l'environnement. Nous mettons en place des potagers bio pour améliorer l'autosuffisance alimentaire et réduire les déchets organiques.
                         </p>
-                        <a href="index.php?action=project&id=1" class="btn btn-primary mx-auto mt-4">
+                        <a href="index.php?action=projectPage&id=1" class="btn btn-primary mx-auto mt-4">
                             En savoir plus
                         </a>
                         <div class="date text-center pt-4">
@@ -209,7 +209,7 @@ ob_start();
                         <p class="text-left">
                             Ce projet a pour objectif de soutenir les nouveaux bacheliers en leur fournissant des sacs d'ordinateur pour faciliter leur accès aux outils numériques nécessaires pour leurs études. Une contribution significative à leur réussite académique et professionnelle.
                         </p>
-                        <a href="index.php?action=project/2" class="btn btn-primary mx-auto">
+                        <a href="index.php?action=projectPage&id=2" class="btn btn-primary mx-auto">
                             En savoir plus
                         </a>
                         <div class="date pt-4">

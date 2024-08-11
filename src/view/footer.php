@@ -44,12 +44,14 @@
                                         <h4>
                                             Newsletters
                                         </h4>
+                                        <form action="api/script.php?action=newsletters" method="POST">
                                         <div class="newsletters">
                                             <label for="">
-                                                <input type="email"> <br>
+                                                <input type="email" name="email"> <br>
                                                 <button type="submit" class="btn btn-primary mt-2">Souscrire</button>
                                             </label>
                                         </div>
+                                        </form>
                                     </div>
 
                                </div>
@@ -59,9 +61,9 @@
                                 <div class="text text-center">
                                 <p class="text-center">
                                         © ONG 2A2D, 2024 <br>
-                                        <p class="text-yellow">
+                                        <strong class="">
                                             Tous droits réservés
-                                        </p>
+                                        </strong>
                                     </p>
 
                                 </div>
