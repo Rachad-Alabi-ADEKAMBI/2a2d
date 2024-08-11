@@ -44,10 +44,10 @@
                                         <h4>
                                             Newsletters
                                         </h4>
-                                        <form action="api/script.php?action=newsletters" method="POST">
+                                        <form action="api/script.php?action=subscribe" method="POST">
                                         <div class="newsletters">
                                             <label for="">
-                                                <input type="email" name="email"> <br>
+                                                <input type="email" name="email" required placeholder="Email"> <br>
                                                 <button type="submit" class="btn btn-primary mt-2">Souscrire</button>
                                             </label>
                                         </div>
