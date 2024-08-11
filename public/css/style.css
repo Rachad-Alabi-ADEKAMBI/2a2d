@@ -89,6 +89,8 @@ a:hover {
   margin-bottom: 5px;
 }
 .navbar .logo {
+  width: 50px;
+  height: 50px;
   border-radius: 30px;
 }
 .navbar .nav-link:hover {
@@ -108,6 +110,7 @@ a:hover {
   width: 100%;
   padding-top: 50px;
   overflow: hidden;
+  text-align: center;
 }
 .hero__content {
   width: 80%;
@@ -116,10 +119,34 @@ a:hover {
   padding-top: 110px;
   text-align: center;
 }
-.hero__content h1 {
+.hero__content .title {
   font-size: 4em;
   font-weight: 700;
   color: #EA4033;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  text-align: center;
+  width: 70%;
+}
+.hero__content .title .one {
+  color: green;
+}
+.hero__content .title .two {
+  color: yellow;
+}
+.hero__content .title .three {
+  color: red;
+  margin-right: 10px;
+}
+.hero__content .title .four, .hero__content .title .five {
+  color: #1155CC;
+}
+.hero__content .title .six, .hero__content .title .seven {
+  color: white;
 }
 .hero__content p {
   margin: 40px auto;
@@ -428,6 +455,9 @@ a:hover {
   .hero {
     height: 140vh;
     width: 100%;
+  }
+  .hero__content .title {
+    width: 80%;
   }
   .about {
     text-align: center;

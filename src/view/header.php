@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark p-2 mb-3">
   <a class="navbar-brand p-2" href="index.php">
-    <img src="public/images/logo.jpg" class='logo ' alt="ong 2A2D">
+    <img src="public/images/logo_big.jpg" class='logo ' alt="ong 2A2D">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <i class="fas fa-bars"></i> 

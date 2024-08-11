@@ -29,7 +29,7 @@
 <link href="public/css/style.css" rel="stylesheet">
 
 <meta name="robots" content="index, follow" />
-<meta name="description" content="Actions africaine pour le developpement durable">
+<meta name="description" content="Actions africaineS pour le developpement durable">
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

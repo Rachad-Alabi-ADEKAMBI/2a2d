@@ -1,5 +1,5 @@
 <?php 
-$title = "2A2D - Organisation Non Gouvernementale d'Actions Africaine pour le Développement Durable (ONG 2A2D)";
+$title = "ONG 2A2D - Organisation Non Gouvernementale d'Actions Africaine pour le Développement Durable (ONG 2A2D)";
 ob_start(); 
 ?>
 <section class='section'>
@@ -8,9 +8,16 @@ ob_start();
         <div class="hero">
             <div class="row">
                 <div class="col-sm-12 col-md-8 mx-auto">
-                    <div class="hero__content animate__animated animate__backInLeft animate__delay-1s">
-                        <h1 class="title">
-                            2A2D
+                    <div class="hero__content animate__animated animate__backInLeft animate__delay-1s text-center">
+                        <h1 class="title mx-auto text-center">
+                            <div class="one">O</div>
+                            <div class="two">N</div>
+                            <span class="three">G</span>
+
+                            <span class="four">2</span>
+                            <span class="five">A</span>
+                            <span class="six">2</span>
+                            <div class="seven">D</div>
                         </h1>
                         <p class="text text-white fw-bold">
                         Organisation Non Gouvernementale d'Actions Africaine pour le Développement Durable (ONG 2A2D)
@@ -206,23 +213,24 @@ ob_start();
                 </div>
                 <div class="col-sm-12 col-md-6 mb-3">
                     <div class="blog__items__item">
-                    <img src="public/images/logo_big.jpg" alt="ong 2a2d">
+                        <img src="public/images/maillots.jpg" alt="ong 2a2d">
                         <h4>
-                            Don de sacs d'ordinateur vide à 9 nouveaux bacheliers
+                        Don de Maillots de football
                         </h4>
-                        <p class="text-left">
-                            Ce projet a pour objectif de soutenir les nouveaux 
-                            bacheliers en leur fournissant des sacs d'ordinateur 
-                            pour faciliter leur accès aux outils numériques 
-                            nécessaires pour leurs études. <br>
-                            Une contribution significative à leur réussite académique et professionnelle.
-                        </p> <br>
-                        <a href="index.php?action=projectPage&id=2" class="btn btn-primary mx-auto">
+                        <p class="text-left mt-4">
+                        L'ONG 2A2D est fière d'avoir soutenu l'équipe de football d'Avotrou en leur
+                         offrant de nouveaux maillots. Ce don s'inscrit dans notre engagement à
+                          promouvoir le développement local à travers le sport, un vecteur 
+                          essentiel d'unité et de progrès pour notre communauté.
+                        </p>
+                        <a href="index.php?action=projectPage&id=3" class="btn btn-primary mx-auto mt-4">
                             En savoir plus
                         </a>
-                        <div class="date pt-1">
-                            <i class="bi bi-calendar"></i> <br>
-                            <p>Sep 2023 </p>
+                        <div class="date text-center pt-1">
+                            <i class="bi bi-calendar"></i> 
+                            <p>
+                            Août 2023 <br>
+                            </p>
                         </div>
                     </div>
                 </div>
