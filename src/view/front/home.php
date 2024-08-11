@@ -82,7 +82,7 @@ ob_start();
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 about__image">
+                <div class="col-sm-12 col-md-6 about__image animate__animated animate__backInRight animate__delay-1s">
                     <img src="public/images/hero2.jpg" alt="ong 2A2D" class="image img-fluid">
                     <div class="about__image__bg"></div>
                 </div>
@@ -196,10 +196,10 @@ ob_start();
                         <a href="index.php?action=projectPage&id=1" class="btn btn-primary mx-auto mt-4">
                             En savoir plus
                         </a>
-                        <div class="date text-center pt-4">
+                        <div class="date text-center pt-1">
                             <i class="bi bi-calendar"></i> <br>
                             <p>
-                            Août 2024  <br> Août 2025
+                            Août 2024 <br> - <br> Août 2025
                             </p>
                         </div>
                     </div>
@@ -211,13 +211,17 @@ ob_start();
                             Don de sacs d'ordinateur vide à 9 nouveaux bacheliers
                         </h4>
                         <p class="text-left">
-                            Ce projet a pour objectif de soutenir les nouveaux bacheliers en leur fournissant des sacs d'ordinateur pour faciliter leur accès aux outils numériques nécessaires pour leurs études. Une contribution significative à leur réussite académique et professionnelle.
-                        </p>
+                            Ce projet a pour objectif de soutenir les nouveaux 
+                            bacheliers en leur fournissant des sacs d'ordinateur 
+                            pour faciliter leur accès aux outils numériques 
+                            nécessaires pour leurs études. <br>
+                            Une contribution significative à leur réussite académique et professionnelle.
+                        </p> <br>
                         <a href="index.php?action=projectPage&id=2" class="btn btn-primary mx-auto">
                             En savoir plus
                         </a>
-                        <div class="date pt-4">
-                            <i class="bi bi-bag-calendar"></i> <br>
+                        <div class="date pt-1">
+                            <i class="bi bi-calendar"></i> <br>
                             <p>Sep 2023 </p>
                         </div>
                     </div>

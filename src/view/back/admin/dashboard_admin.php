@@ -22,7 +22,7 @@
         end menu-->
 
         <!--documents-->
-                <div class="col-sm-12 col-md-8 text-center mx-auto" v-if="showAll">
+                <div class="col-sm-12 col-md-8 text-center mx-auto">
                         <h2 class="mt-2">
                         Liste des emails newsletters
                         </h2>
@@ -32,12 +32,12 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Date d'inscription</th>
-                                        <th scope="col">Emails</th>
+                                        <th scope="col">Email</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for='detail in details' :key='detail.id'>
-                                        <td> {{ detail.date_of_insertion }}</td>
+                                    <tr v-for="detail in details" :key="detail.id">
+                                        <td> {{ formatDate(detail.date_of_insertion) }}</td>
                                         <td> {{ detail.email }} </td>
                                     </tr>
                                 </tbody>
@@ -66,9 +66,8 @@
                 this.displayEmails();
             },
             methods: {
-                displayEmail() {
-                    this.showAll = true;
-                    axios.get('api/script.php?action=allEmails')
+                displayEmails() {
+                    axios.get('api/script.php?action=newsletters')
                         .then((response) => {
                             console.log(response.data);
                             this.details = response.data;
@@ -77,7 +76,11 @@
                             console.error(error);
                             alert('Failed to fetch datas');
                         });
-                }
-           }
+                },
+                 formatDate(date) {
+    const [year, month, day] = date.split('-');
+    return `${day}-${month}-${year}`;
+}
+           },
         });
 </script>

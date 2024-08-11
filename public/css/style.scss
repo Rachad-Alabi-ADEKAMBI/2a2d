@@ -178,7 +178,7 @@ a {
       color: $secondary;
 
       i{
-        color: $primary;
+        color: $secondary;
         font-weight: bold;
       }
     }
@@ -251,6 +251,11 @@ a {
     margin: 10px;
     flex: 1;
     padding: 30px;
+
+    i{
+      color: $white;
+      font-weight: bold;
+    }
 
     h3 {
       margin: 30px auto;
@@ -335,13 +340,13 @@ a {
           .date {
             position: absolute;
             border-radius: 5px;
-            top: 115px;
+            top: 215px;
             right: -30px;
-            height: 90px;
-            width: 70px;
+            height: 195px;
+            width: 75px;
             background-color: $secondary;
             text-align: center;
-            color: $black;
+            color: $white;
             font-weight: bold;
         }
     }
@@ -463,6 +468,14 @@ a {
             &:hover {
               color: $secondary;
             }
+          }
+        }
+      }
+
+      .newsletters{
+        label{
+          input{
+            width: 250px;
           }
         }
       }

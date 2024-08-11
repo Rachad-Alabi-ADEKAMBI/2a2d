@@ -75,11 +75,7 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
     }
 
     elseif ($_GET['action'] === 'dashboard_adminPage') {
-      if (!isset($_SESSION['user'])) {
-        loginPage();
-      } else {
           dashboard_adminPage();
-      }
     }
 
     elseif ($_GET['action'] === 'home') {

@@ -18,60 +18,74 @@
 
             <hr>
             <h3>Projets phare</h3>
-            <div class="row blog__items mt-3">
-                <div class="col-sm-12 col-md-6 mx-auto text-center">
+            <div class="row blog__items mt-3 text-center">
+                <div class="col-sm-12 col-md-6 mb-3 text-center">
                     <div class="blog__items__item mx-auto text-center">
-                        <h3>
-                            Potager bio et biogaz au service de l'environnement (Août 2024 - Août 2025)
-                        </h3>
+                        <img src="public/images/biogaz2.jpg" alt="ong 2a2d">
+                        <h4>
+                            Potager bio et biogaz au service de l'environnement 
+                        </h4>
                         <p class="text-left mt-4">
                             Ce projet vise à promouvoir l'agriculture durable et la production de biogaz en utilisant des techniques respectueuses de l'environnement. Nous mettons en place des potagers bio pour améliorer l'autosuffisance alimentaire et réduire les déchets organiques.
                         </p>
-                        <a href="index.php?action=project/1" class="btn btn-primary mx-auto mt-4">
+                        <a href="index.php?action=projectPage&id=1" class="btn btn-primary mx-auto mt-4">
                             En savoir plus
                         </a>
-                        <div class="date text-center pt-4">
-                            <i class="bi bi-leaf"></i>
+                        <div class="date text-center pt-1">
+                            <i class="bi bi-calendar"></i> <br>
+                            <p>
+                            Août 2024 <br> - <br> Août 2025
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <hr>
-            <h3>Projets passées</h3>
+            <h3>Projets antérieurs</h3>
             <div class="row blog__items mt-3">
                 <div class="col-sm-12 col-md-6 mb-3">
                     <div class="blog__items__item">
-                        <h3>
-                            Potager bio et biogaz au service de l'environnement (Août 2024 - Août 2025)
-                        </h3>
+                        <img src="public/images/maillots.jpg" alt="ong 2a2d">
+                        <h4>
+                        Don de Maillots de football
+                        </h4>
                         <p class="text-left mt-4">
-                            Ce projet vise à promouvoir l'agriculture durable et la production de biogaz en utilisant des techniques respectueuses de l'environnement. Nous mettons en place des potagers bio pour améliorer l'autosuffisance alimentaire et réduire les déchets organiques.
+                        L'ONG 2A2D est fière d'avoir soutenu l'équipe de football d'Avotrou en leur
+                         offrant de nouveaux maillots. Ce don s'inscrit dans notre engagement à
+                          promouvoir le développement local à travers le sport, un vecteur 
+                          essentiel d'unité et de progrès pour notre communauté.
                         </p>
-                        <a href="index.php?action=project/1" class="btn btn-primary mx-auto mt-4">
+                        <a href="index.php?action=projectPage&id=3" class="btn btn-primary mx-auto mt-4">
                             En savoir plus
                         </a>
-                        <div class="date text-center pt-4">
-                            <i class="bi bi-leaf"></i>
+                        <div class="date text-center pt-1">
+                            <i class="bi bi-calendar"></i> 
+                            <p>
+                            Août 2023 <br>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 mb-3">
                     <div class="blog__items__item">
-                        <h3>
-                            Don de sacs d'ordinateur vide à 9 nouveaux bacheliers (Septembre 2023)
-                        </h3>
+                    <img src="public/images/logo_big.jpg" alt="ong 2a2d">
+                        <h4>
+                            Don de sacs d'ordinateur vide à 9 nouveaux bacheliers
+                        </h4>
                         <p class="text-left">
-                            Ce projet a pour objectif de soutenir les nouveaux bacheliers en 
-                            leur fournissant des sacs d'ordinateur pour faciliter leur accès 
-                            aux outils numériques nécessaires pour leurs études. 
+                            Ce projet a pour objectif de soutenir les nouveaux 
+                            bacheliers en leur fournissant des sacs d'ordinateur 
+                            pour faciliter leur accès aux outils numériques 
+                            nécessaires pour leurs études. <br>
                             Une contribution significative à leur réussite académique et professionnelle.
-                        </p>
-                        <a href="index.php?action=project/2" class="btn btn-primary mx-auto">
+                        </p> <br>
+                        <a href="index.php?action=projectPage&id=2" class="btn btn-primary mx-auto">
                             En savoir plus
                         </a>
-                        <div class="date pt-4">
-                            <i class="bi bi-bag-check"></i>
+                        <div class="date pt-1">
+                            <i class="bi bi-calendar"></i> <br>
+                            <p>Sep 2023 </p>
                         </div>
                     </div>
                 </div>

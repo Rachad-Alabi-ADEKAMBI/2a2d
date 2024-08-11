@@ -150,7 +150,7 @@ a:hover {
   color: #EA4033;
 }
 .categories .category__icon i {
-  color: #56A866;
+  color: #EA4033;
   font-weight: bold;
 }
 .categories .category__name {
@@ -217,6 +217,10 @@ a:hover {
   margin: 10px;
   flex: 1;
   padding: 30px;
+}
+.services__service i {
+  color: white;
+  font-weight: bold;
 }
 .services__service h3 {
   margin: 30px auto;
@@ -290,13 +294,13 @@ a:hover {
 .blog__items__item .date {
   position: absolute;
   border-radius: 5px;
-  top: 115px;
+  top: 215px;
   right: -30px;
-  height: 90px;
-  width: 70px;
+  height: 195px;
+  width: 75px;
   background-color: #EA4033;
   text-align: center;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -392,6 +396,9 @@ a:hover {
 }
 .footer__items__item ul li a:hover {
   color: #EA4033;
+}
+.footer__items__item .newsletters label input {
+  width: 250px;
 }
 .footer__items__item .footer__gallery {
   display: flex;
