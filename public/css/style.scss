@@ -176,6 +176,11 @@ a {
 
     &__icon {
       color: $secondary;
+
+      i{
+        color: $primary;
+        font-weight: bold;
+      }
     }
 
     &__name {
@@ -395,9 +400,25 @@ a {
       margin: 5px auto;
     }
 
+    span{
+      color: $primary;
+      font-weight: bold;
+    }
+
+    strong{
+      color: $white;
+      font-weight: normal;
+    }
     .links {
       i {
         font-size: 1.4em;
+        color: $primary
+      }
+
+      a:hover{
+        i{
+          color: $secondary
+        }
       }
     }
   }
@@ -531,7 +552,7 @@ a {
       &__items{
           &__item{
             .date{
-              top: 220px;
+              top: 10px;
             }
           }
       }

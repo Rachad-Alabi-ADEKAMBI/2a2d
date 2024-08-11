@@ -3,7 +3,7 @@
     <img src="public/images/logo.jpg" class='logo ' alt="ong 2A2D">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <i class="fas fa-bars"></i> 
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,13 +28,10 @@
 </nav>
 
 <style>
-  .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .navbar-toggler-icon {
-   color: white;
-  }
+ i{
+  color: white;
+  font-weight: bold;
+ }
 
   .navbar-collapse {
     justify-content: flex-start;

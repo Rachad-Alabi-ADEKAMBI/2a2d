@@ -5,7 +5,7 @@
  ob_start(); ?>
     <section class='section' >
          <!-- Blog -->
-         <div class="container mt-5 blog" id="blog">
+         <div class="container mt-5 pt-2 blog" id="blog">
             <h2 class="text-center">
                 Nos projets
             </h2>

@@ -149,6 +149,10 @@ a:hover {
 .categories .category__icon {
   color: #EA4033;
 }
+.categories .category__icon i {
+  color: #56A866;
+  font-weight: bold;
+}
 .categories .category__name {
   color: white;
   font-weight: bold;
@@ -334,8 +338,20 @@ a:hover {
   height: 230px;
   margin: 5px auto;
 }
+.team__member span {
+  color: #56A866;
+  font-weight: bold;
+}
+.team__member strong {
+  color: white;
+  font-weight: normal;
+}
 .team__member .links i {
   font-size: 1.4em;
+  color: #56A866;
+}
+.team__member .links a:hover i {
+  color: #EA4033;
 }
 
 .footer {
@@ -436,6 +452,6 @@ a:hover {
     padding: 8px;
   }
   .blog__items__item .date {
-    top: 220px;
+    top: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

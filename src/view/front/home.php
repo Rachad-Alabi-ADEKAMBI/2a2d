@@ -135,39 +135,40 @@ ob_start();
 
         <!-- Clients -->
         <div class="container mt-5 clients">
-    <h2 class="text-center">
-        Nos Statistiques
-    </h2>
-    <p class="text-center">
-        Découvrez l'impact de notre travail à travers ces chiffres clés, qui témoignent de notre engagement envers le développement durable et le soutien communautaire.
-    </p>
-    <div class="clients__list">
-        <div class="clients__list__item">
-            <div class="circle">
-                <p>120+</p>
-            </div>
-            <p>
-                Projets Réalisés
+            <h2 class="text-center">
+                Nos Statistiques
+            </h2>
+            <p class="text-center">
+                Découvrez l'impact de notre travail à travers ces chiffres clés, qui témoignent de notre engagement envers le développement durable et le soutien communautaire.
             </p>
-        </div>
-        <div class="clients__list__item">
-            <div class="circle">
-                <p>500+</p>
+            <div class="clients__list">
+                <div class="clients__list__item">
+                    <div class="circle">
+                        <p>120+</p>
+                    </div>
+                    <p>
+                        Projets Réalisés
+                    </p>
+                </div>
+                <div class="clients__list__item">
+                    <div class="circle">
+                        <p>500+</p>
+                    </div>
+                    <p>
+                        Familles Soutenues
+                    </p>
+                </div>
+                <div class="clients__list__item">
+                    <div class="circle">
+                        <p>30+</p>
+                    </div>
+                    <p>
+                        Partenaires Locaux
+                    </p>
+                </div>
+                </div>
             </div>
-            <p>
-                Familles Soutenues
-            </p>
         </div>
-        <div class="clients__list__item">
-            <div class="circle">
-                <p>30+</p>
-            </div>
-            <p>
-                Partenaires Locaux
-            </p>
-        </div>
-        </div>
-    </div>
 
         <!-- End Clients -->
 
@@ -177,7 +178,10 @@ ob_start();
                 Nos Projets
             </h2>
             <p class="text-center">
-                Découvrez nos projets récents qui illustrent notre engagement pour un développement durable et une amélioration des conditions de vie des communautés. Ces initiatives démontrent notre détermination à faire une différence concrète.
+                Découvrez nos projets récents qui illustrent notre engagement pour 
+                un développement durable et une amélioration des conditions de vie des
+                 communautés. Ces initiatives démontrent notre détermination à faire une
+                  différence concrète.
             </p>
             <div class="row blog__items mt-3">
                 <div class="col-sm-12 col-md-6 mb-3">
