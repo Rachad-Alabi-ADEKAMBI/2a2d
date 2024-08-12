@@ -21,6 +21,7 @@ require_once 'src/controller/front/electricity.php';
 require_once 'src/controller/front/register.php';
 
 require_once 'src/controller/back/admin/dashboard_admin.php';
+require_once 'src/controller/front/survey.php';
 
 if (isset($_GET['action']) && $_GET['action'] !== '') {
 
@@ -77,6 +78,10 @@ if (isset($_GET['action']) && $_GET['action'] !== '') {
     elseif ($_GET['action'] === 'dashboard_adminPage') {
           dashboard_adminPage();
     }
+
+    elseif ($_GET['action'] === 'surveyPage') {
+      surveyPage();
+}
 
     elseif ($_GET['action'] === 'home') {
       home();
