@@ -14,7 +14,7 @@
                                 <div class="row g-3">
                                     <div class="col-sm-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" 
+                                            <input type="text" class="form-control"  style="color: black"
                                             required name='username' value="<?= $_SESSION['login']['username'] ?>"  placeholder="">
                                             <label for="name">Identifiant <span class="red">*</span></label>
                                         </div>
@@ -32,15 +32,9 @@
 
                                 <div class="row g-3 mt-4">
                                     <div class="col-sm-12 col-md-6 mx-auto text-center">
-                                        <button class="btn btn-primary w-100 py-3" type="submit">
+                                        <button class="btn btn-primary w-100 py-3" >
                                             Connexion
                                         </button> <br>
-                                    </div>
-
-                                    <div class="col-12 text-center">
-                                        <p class="mt-3">
-                                            Pas encore de compte ? <a href="index.php?action=registerPage" class="text-blue">Inscription</a>
-                                        </p>
                                     </div>
                                 </div>
                             </form>
