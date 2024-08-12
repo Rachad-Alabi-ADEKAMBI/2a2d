@@ -9,7 +9,7 @@
                     <div class="col-sm-12 col-md-7 mt-4 mx-auto" >
                         <div class="bg-dark mt-5 border pt-5 p-3 rounded p-sm-5 wow">
                             <form action="api/script.php?action=login" method="POST" >
-                                <h1 class="mx-auto text-center">Connexion</h1>
+                                <h1 class="mx-auto text-center">Formulaire d'enquete</h1>
 
                                 <div class="row g-3">
                                     <div class="col-sm-12">
