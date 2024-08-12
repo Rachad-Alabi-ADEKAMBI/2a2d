@@ -47,3 +47,21 @@
 <?php $content = ob_get_clean(); ?>
 
 <?php require './src/view/layout.php'; ?>
+
+<script>
+new Vue({
+    el: '#app',
+    data: {
+        id: <?php echo ($_GET['id']); ?>,
+        details: '',
+    },
+    computed: {
+
+    },
+    methods: {
+        getImg(image) {
+            return `./public/images/${image}`;
+        }
+    }
+});
+</script>
