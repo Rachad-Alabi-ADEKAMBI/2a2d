@@ -14,7 +14,7 @@
                                 <div class="row g-3">
                                     <div class="col-sm-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control"  style="color: black"
+                                            <input type="text" class="form-control" 
                                             required name='username' value="<?= $_SESSION['login']['username'] ?>"  placeholder="">
                                             <label for="name">Identifiant <span class="red">*</span></label>
                                         </div>
@@ -61,7 +61,15 @@ new Vue({
     methods: {
         getImg(image) {
             return `./public/images/${image}`;
-        }
+        },
+
     }
 });
 </script>
+
+<style>
+    input{
+        color: black;
+        display: none;
+    }
+</style>
