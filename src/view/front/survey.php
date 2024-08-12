@@ -33,7 +33,7 @@
                                 <div class="row g-3 mt-4">
                                     <div class="col-sm-12 col-md-6 mx-auto text-center">
                                         <button class="btn btn-primary w-100 py-3" >
-                                            Connexion
+                                            Suivant
                                         </button> <br>
                                     </div>
                                 </div>
