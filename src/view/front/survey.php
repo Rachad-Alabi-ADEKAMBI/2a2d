@@ -70,6 +70,7 @@ new Vue({
 <style>
     input{
         color: black;
+        
         display: none;
     }
 </style>
