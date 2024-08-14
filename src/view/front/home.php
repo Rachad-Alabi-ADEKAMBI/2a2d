@@ -151,7 +151,7 @@ ob_start();
             <div class="clients__list">
                 <div class="clients__list__item">
                     <div class="circle">
-                        <p>120+</p>
+                        <p>3 +</p>
                     </div>
                     <p>
                         Projets Réalisés
@@ -159,7 +159,7 @@ ob_start();
                 </div>
                 <div class="clients__list__item">
                     <div class="circle">
-                        <p>500+</p>
+                        <p>10 +</p>
                     </div>
                     <p>
                         Familles Soutenues
@@ -167,7 +167,7 @@ ob_start();
                 </div>
                 <div class="clients__list__item">
                     <div class="circle">
-                        <p>30+</p>
+                        <p>10 +</p>
                     </div>
                     <p>
                         Partenaires Locaux

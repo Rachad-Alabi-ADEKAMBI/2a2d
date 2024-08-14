@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-$primary: #56A866; // Ukrainian blue
-$secondary:  #EA4033; // Ukrainian yellow
-$tertiary: #F7BB39;
+$primary: #56A866; 
+$secondary:  #EA4033; 
 $white: white;
 $wheat: #F9F9F9;
 $black: black;
-$grey: rgb(33, 37, 41); // Dark grey for dark theme
-$grey-dark: rgb(20, 24, 28); // Even darker grey
-
+$grey: rgb(33, 37, 41); 
+$grey-dark: rgb(20, 24, 28);
 @mixin flex($flex-direction: row) {
   display: flex;
   justify-content: start;

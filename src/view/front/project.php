@@ -32,7 +32,7 @@ ob_start();
                     </p>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary mx-auto">
+                    <a href="index.php?action=surveyPage" class="btn btn-primary mx-auto">
                     Remplir le formulaire
                 </a>
                </div>

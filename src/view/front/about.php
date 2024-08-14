@@ -3,7 +3,7 @@
 // $articles
 
  ob_start(); ?>
-    <section class='section mt-5 pt-3' >
+    <section class='section mt-1 pt-3' >
     <h1 class="text-center">
              A-propos
     </h1>
@@ -77,7 +77,7 @@
 
                 <div class="row">
                 <div class="col-sm-12 col-md-6 offers__image  animate__animated animate__backInLeft animate__delay-1s">
-                    <img src="public/images/logo_big.jpg" alt="ong 2a2d" class="img-fluid mt-3">
+                    <img src="public/images/logo.jpg" alt="ong 2a2d" class="img-fluid mt-3">
                 </div>
 
                 <div class="col-sm-12 col-md-6 offers__image  animate__animated animate__backInRight animate__delay-1s">

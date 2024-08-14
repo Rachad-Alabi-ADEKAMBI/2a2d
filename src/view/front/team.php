@@ -5,7 +5,7 @@
  ob_start(); ?>
     <section class='section' >
         <div class="container">
-            <h1 class="text-center mt-2 pt-3">
+            <h1 class="text-center mt-1 pt-3">
                 Notre équipe
             </h1>
 
@@ -20,27 +20,27 @@
 
             <div class="row g-0 gx-5 align-items-end team mt-2">
                 <div class="col-sm-12 col-md-4 team__member">
-                    <img src="public/images/presidente.jpg" alt="">
+                    <img src="public/images/presidente.jpg" alt="Equipe de l'ong 2A2D">
                 </div>
                 <div class="col-sm-12 col-md-4 team__member">
-                    <img src="public/images/vice_presidente.jpg" alt="">
+                    <img src="public/images/vice_presidente.jpg" alt="Equipe de l'ong 2A2D">
                 </div>
 
                 <div class="col-sm-12 col-md-4 team__member">
-                    <img src="public/images/tresorier.jpg" alt="">
+                    <img src="public/images/tresorier.jpg" alt="Equipe de l'ong 2A2D">
                 </div>
             </div>
 
             <row class="g-0 gx-5 align-items-end team mt-2">
             <div class="col-sm-12 col-md-4 team__member">
-                    <img src="public/images/charge_de_ressources.jpg" alt="">
+                    <img src="public/images/charge_de_ressources.jpg" alt="Equipe de l'ong 2A2D">
                 </div>
                 <div class="col-sm-12 col-md-4 team__member">
-                    <img src="public/images/secretaire.jpg" alt="">
+                    <img src="public/images/secretaire.jpg" alt="Equipe de l'ong 2A2D">
                 </div>
 
                 <div class="col-sm-12 col-md-4 team__member">
-                    <img src="public/images/charge_de_programmes.jpg" alt="">
+                    <img src="public/images/charge_de_programmes.jpg" alt="Equipe de l'ong 2A2D">
                 </div>
             </row>
 

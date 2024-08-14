@@ -26,7 +26,7 @@
     </ul>
   </div>
 
-  <a href="index.php?action=projectPage?id=3" class="btn btn-primary ml-0 right">
+  <a href="index.php?action=projectPage&id=1" class="btn btn-primary ml-0 right">
     Projet phare
   </a>
 </nav>
