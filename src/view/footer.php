@@ -8,6 +8,9 @@
                                         </h4>
 
                                         <ul>
+                                        <li>
+                                            <i class="bi bi-geo"></i> Avotou, lot 720, Cotonou 
+                                           </li>
                                             <li>
                                             <i class="bi bi-envelope"></i> mail@2a2d.com    
                                            </li>
