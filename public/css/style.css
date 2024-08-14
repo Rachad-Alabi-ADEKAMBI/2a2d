@@ -87,6 +87,7 @@ a:hover {
   color: white;
   z-index: 9999;
   margin-bottom: 5px;
+  display: none;
 }
 .navbar .logo {
   width: 50px;
