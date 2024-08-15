@@ -21,7 +21,7 @@
         </div>
         end menu-->
 
-        <!--documents-->
+        <!--newsletters-->
                 <div class="col-sm-12 col-md-8 text-center mx-auto">
                         <h2 class="mt-2">
                         Liste des emails newsletters
@@ -46,7 +46,7 @@
                     </div>
 
                 </div>
-        <!--end documents-->
+        <!--end newsletters-->
 
 
     </section>

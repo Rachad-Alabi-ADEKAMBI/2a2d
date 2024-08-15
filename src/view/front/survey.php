@@ -296,7 +296,7 @@
                                     </div>
 
                                     <div class="buttons mt-3">
-                                        <button class="btn btn-tertiary" type="button" @click="displayStep1">Précédent</button>
+                                        <button class="btn btn-info" type="button" @click="displayStep1">Précédent</button>
                                         <button class="btn btn-primary" type="button" @click="displayStep3">Suivant</button>
                                     </div>
                                 </div>
@@ -357,7 +357,7 @@
     </div>
 
     <div class="buttons mt-3">
-        <button class="btn btn-tertiary" type="button" @click="displayStep2">Précédent</button>
+        <button class="btn btn-info" type="button" @click="displayStep2">Précédent</button>
         <button class="btn btn-primary" type="submit">Soumettre</button>
     </div>
 </div>
@@ -386,10 +386,12 @@
                 formData: {
                   last_name: '',
                   first_name: '',
+                  phone: '',
                   birth_date: '',
                   sex: '',
                   category: '',
                   status: '',
+                  area: '', 
                   household_size: '',
                   vegetables_in_diet: '',
                   vegetable_list: '',
@@ -412,8 +414,6 @@
                   cooking_frequency: '',
                   monthly_budget: '', 
                   biogas_pack_interest: ''
-
-
                 }
               };
             },
