@@ -111,7 +111,8 @@
                 },
                 displaySurveys() {
                     this.showNewsletters = false;
-                    
+                    this.showSurveys = true;
+                    this.showUser = false;
                     axios.get('api/script.php?action=surveys')
                         .then((response) => {
                             console.log(response.data);
@@ -120,6 +121,11 @@
                         .catch((error) => {
                             console.error(error);
                         });
+                },
+                displayUser(){
+                    this.showNewsletters = false;
+                    this.showSurveys = false;
+                    this.showUser = true;
                 },
                  formatDate(date) {
                     const [year, month, day] = date.split('-');
