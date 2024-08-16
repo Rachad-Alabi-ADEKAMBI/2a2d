@@ -20,7 +20,7 @@
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
                                                                 <input type="text" class="form-control" id="name"
-                                                                v-model="formData.last_name" placeholder="Nom" required>
+                                                                v-model="last_name" placeholder="Nom" >
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
@@ -28,7 +28,7 @@
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
                                                                 <input type="text" class="form-control" id="first_name" 
-                                                                v-model="formData.first_name" placeholder="Prénom" required>
+                                                                v-model="first_name" placeholder="Prénom" >
                                                             </div>
                                                         </div>
                                                     </div>
@@ -37,8 +37,15 @@
                                                             <label for="phone" class="text-white">Téléphone:</label> 
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
-                                                                <input type="number" class="form-control" id="phone"
-                                                                v-model="formData.phone" placeholder="Numero de telephone" >
+                                                                <input type="number" class="form-control" id="phone" v-model='phone' placeholder="Numero de telephone" >
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <label for="area" class="text-white">Arrondissement:</label> 
+                                                            <span class="text-danger">*</span>
+                                                            <div class="form-floating">
+                                                                <input type="number" class="form-control" id="area" v-model="area" placeholder="Arrondissement" >
                                                             </div>
                                                         </div>
                                                     </div>
@@ -49,14 +56,14 @@
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
                                                                 <input type="date" class="form-control" id="birth_date" 
-                                                                v-model="formData.birth_date" required>
+                                                                v-model="birth_date" >
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="sex">Votre sexe</label> 
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="sex" v-model="formData.sex" required>
+                                                                <select class="form-control" id="sex" v-model="sex" >
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="M">Masculin</option>
                                                                     <option value="F">Féminin</option>
@@ -78,7 +85,7 @@
                                                         <div class="col-md-6">
                                                             <label for="category" class="text-white">Catégorie socio-professionnelle</label> 
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="category" v-model="formData.category" required>
+                                                                <select class="form-control" id="category" v-model="category" >
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Agriculteur">Agriculteur</option>
                                                                     <option value="Artisan">Artisan</option>
@@ -96,7 +103,7 @@
                                                         <div class="col-md-6">
                                                             <label for="status">Êtes-vous locataire ou propriétaire ?</label> 
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="status" v-model="formData.status" required>
+                                                                <select class="form-control" id="status" v-model="status" >
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Locataire">Locataire</option>
                                                                     <option value="Propriétaire">Propriétaire</option>
@@ -109,7 +116,7 @@
                                                         <div class="col-md-6">
                                                             <label for="household_size">Combien de personnes constituent votre foyer ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="household_size" v-model="formData.household_size">
+                                                                <select class="form-control" id="household_size" v-model="household_size">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Entre 1 et 2 personnes">Entre 1 et 2 personnes</option>
                                                                     <option value="Entre 3 et 4 personnes">Entre 3 et 4 personnes</option>
@@ -120,7 +127,7 @@
                                                         <div class="col-md-6">
                                                             <label for="vegetables_in_diet">Les légumes font-ils partie de votre alimentation de base ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="vegetables_in_diet" v-model="formData.vegetables_in_diet">
+                                                                <select class="form-control" id="vegetables_in_diet" v-model="vegetables_in_diet">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Non">Non</option>
                                                                     <option value="Oui">Oui</option>
@@ -129,12 +136,12 @@
                                                         </div>
                                                     </div>
 
-                                                    <div v-if="formData.vegetables_in_diet === 'Oui'">
+                                                    <div v-if="vegetables_in_diet === 'Oui'">
                                                         <div class="row g-3">
                                                             <div class="col-md-12">
                                                                 <label for="vegetable_list">Si oui, lesquels (5 principaux) ?</label>
                                                                 <div class="form-floating">
-                                                                    <input type="text" class="form-control" id="vegetable_list" v-model="formData.vegetable_list" placeholder="Ex : Carottes, Pommes de terre, etc.">
+                                                                    <input type="text" class="form-control" id="vegetable_list" v-model="vegetable_list" placeholder="Ex : Carottes, Pommes de terre, etc.">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -144,18 +151,18 @@
                                                         <div class="col-md-6">
                                                             <label for="land_space">Disposez-vous d’un espace vide en pleine terre aménageable en potager ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="land_space" v-model="formData.land_space">
+                                                                <select class="form-control" id="land_space" v-model="land_space">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Non">Non</option>
                                                                     <option value="Oui">Oui</option>
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6" v-if="formData.land_space === 'Non'">
+                                                        <div class="col-md-6" v-if="land_space === 'Non'">
                                                             <label for="alternative_space">Si non, avez-vous des espaces où vous pourrez entreposer des sacs potagers pour une culture verticale ?</label>
                                                             <div class="form-floating">
                                                                  <select class="form-control" id="alternative_space"
-                                                                  placeholder="Détails sur les espaces disponibles" v-model="formData.alternative_space">
+                                                                  placeholder="Détails sur les espaces disponibles" v-model="alternative_space">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Non">Non</option>
                                                                     <option value="Oui">Oui</option>
@@ -164,12 +171,12 @@
                                                         </div>
                                                     </div>
 
-                                                    <div v-if="formData.land_space === 'Oui'">
+                                                    <div v-if="land_space === 'Oui'">
                                                             <div class="row g-3">
                                                                 <div class="col-md-6">
                                                                     <label for="space_size">Si oui, quelle est la surface en m² dont vous disposez ?</label>
                                                                     <div class="form-floating">
-                                                                        <select class="form-control" id="space_size" v-model="formData.space_size">
+                                                                        <select class="form-control" id="space_size" v-model="space_size">
                                                                             <option value="" disabled>Veuillez sélectionner</option>
                                                                             <option value="de 1 à 4 m²">de 1 à 4 m²</option>
                                                                             <option value="de 4 à 6 m²">de 4 à 6 m²</option>
@@ -181,7 +188,7 @@
                                                                 <div class="col-md-6">
                                                                     <label for="space_observation">Observation (espace nu ou cimenté) :</label>
                                                                     <div class="form-floating">
-                                                                        <input type="text" class="form-control" id="space_observation" v-model="formData.space_observation" placeholder="Description de espace">
+                                                                        <input type="text" class="form-control" id="space_observation" v-model='space_observation' placeholder="Description de espace">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -191,7 +198,7 @@
                                                         <div class="col-md-6">
                                                             <label for="nutritional_importance">Connaissent-ils l’importance nutritionnelle des légumes dans un régime alimentaire ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="nutritional_importance" v-model="formData.nutritional_importance">
+                                                                <select class="form-control" id="nutritional_importance" v-model="nutritional_importance">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Oui">Oui</option>
                                                                     <option value="Non">Non</option>
@@ -201,7 +208,7 @@
                                                         <div class="col-md-6">
                                                             <label for="interested_in_production">Seriez-vous intéressé(e) pour produire des fruits et légumes frais pour votre consommation ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="interested_in_production" v-model="formData.interested_in_production">
+                                                                <select class="form-control" id="interested_in_production" v-model="interested_in_production">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Oui je suis intéressé">Oui je suis intéressé</option>
                                                                     <option value="Oui mais je vais y réfléchir">Oui mais je vais y réfléchir</option>
@@ -215,7 +222,7 @@
                                                         <div class="col-md-6">
                                                             <label for="interested_in_installation">Seriez-vous intéressé(e) par une installation d’un potager biologique sur cet espace vide ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="interested_in_installation" v-model="formData.interested_in_installation">
+                                                                <select class="form-control" id="interested_in_installation" v-model="interested_in_installation">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Oui c’est possible">Oui c’est possible</option>
                                                                     <option value="Oui mais c’est à voir">Oui mais c’est à voir</option>
@@ -226,7 +233,7 @@
                                                         <div class="col-md-6">
                                                             <label for="available_time">Avez-vous du temps libre pour vous occuper d’un potager ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="available_time" v-model="formData.available_time">
+                                                                <select class="form-control" id="available_time" v-model="available_time">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Oui">Oui</option>
                                                                     <option value="Non">Non</option>
@@ -239,7 +246,7 @@
                                                         <div class="col-md-6">
                                                             <label for="waste_management">Comment gérez-vous vos déchets organiques domestiques ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="waste_management" v-model="formData.waste_management">
+                                                                <select class="form-control" id="waste_management" v-model="waste_management">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Je fais du tri sélectif et je les déverse à la poubelle">Je fais du tri sélectif et je les déverse à la poubelle</option>
                                                                     <option value="Je les déverse dans les poubelles sans trier">Je les déverse dans les poubelles sans trier</option>
@@ -250,7 +257,7 @@
                                                         <div class="col-md-6">
                                                             <label for="gardener_experience">Diriez-vous que vous êtes</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="gardener_experience" v-model="formData.gardener_experience">
+                                                                <select class="form-control" id="gardener_experience" v-model="gardener_experience">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Jardinier ou maraicher débutant">Jardinier ou maraicher débutant</option>
                                                                     <option value="Jardinier ou maraicher ayant une petite expérience">Jardinier ou maraicher ayant une petite expérience</option>
@@ -264,23 +271,23 @@
                                                         <div class="col-md-6">
                                                             <label for="gardening_tools">Disposez-vous d’un outillage en matière d’entretien de potager ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="gardening_tools" v-model="formData.gardening_tools">
+                                                                <select class="form-control" id="gardening_tools" v-model="gardening_tools">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Non">Non</option>
                                                                     <option value="Oui">Oui</option>
                                                                 </select>
                                                             </div>
-                                                            <div v-if="formData.gardening_tools === 'Oui'">
+                                                            <div v-if="gardening_tools === 'Oui'">
                                                                 <label for="tools_list">Si oui, lesquels ?</label>
                                                                 <div class="form-floating">
-                                                                    <input type="text" class="form-control" id="tools_list" v-model="formData.tools_list" placeholder="Ex : Fourche, Binette, etc.">
+                                                                    <input type="text" class="form-control" id="tools_list" v-model="tools_list" placeholder="Ex : Fourche, Binette, etc.">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label for="weekly_hours">Par semaine, de combien d’heures disposez-vous pour jardiner ?</label>
                                                             <div class="form-floating">
-                                                                <input type="text" class="form-control" id="weekly_hours" v-model="formData.weekly_hours" placeholder="Nombre d’heures par semaine">
+                                                                <input type="number" class="form-control" id="weekly_hours" v-model="weekly_hours" placeholder="Nombre d’heures par semaine">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -289,7 +296,7 @@
                                                         <div class="col-md-6">
                                                             <label for="objectives">Quels peuvent être vos objectifs ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="objectives" v-model="formData.objectives">
+                                                                <select class="form-control" id="objectives" v-model="objectives">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Arriver à une auto-suffisance en matière de légumes.">Arriver à une auto-suffisance en matière de légumes.</option>
                                                                     <option value="Avoir le plaisir de récolter quelques légumes de saison.">Avoir le plaisir de récolter quelques légumes de saison.</option>
@@ -300,7 +307,7 @@
                                                         <div class="col-md-6">
                                                             <label for="composting">Connaissez-vous le compostage ?</label>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="composting" v-model="formData.composting">
+                                                                <select class="form-control" id="composting" v-model="composting">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Oui">Oui</option>
                                                                     <option value="Non">Non</option>
@@ -311,8 +318,8 @@
                                                     </div>
 
                                                     <div class="buttons mt-3">
-                                                        <button class="btn btn-info" type="button" @click="displayStep1">Précédent</button>
-                                                        <button class="btn btn-primary" type="button" @click="displayStep3">Suivant</button>
+                                                        <button class="btn btn-info"  @click="displayStep1">Précédent</button>
+                                                        <button class="btn btn-primary" @click="displayStep3">Suivant</button>
                                                     </div>
                                                 </div>
 
@@ -325,7 +332,7 @@
                                                         <div class="col-md-6">
                                                             <label for="cooking_fuel">Par quel moyen faites-vous du feu pour cuisiner ?</label> 
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="cooking_fuel" v-model="formData.cooking_fuel" required>
+                                                                <select class="form-control" id="cooking_fuel" v-model="cooking_fuel" >
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Feu de bois ou charbon de bois">Feu de bois ou charbon de bois</option>
                                                                     <option value="Gaz">Gaz</option>
@@ -336,7 +343,7 @@
                                                         <div class="col-md-6">
                                                             <label for="cooking_frequency">Quelle est votre fréquence en termes de cuisine ?</label> 
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="cooking_frequency" v-model="formData.cooking_frequency" required>
+                                                                <select class="form-control" id="cooking_frequency" v-model="cooking_frequency" >
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Une fois par jour">Une fois par jour</option>
                                                                     <option value="Deux fois par jour">Deux fois par jour</option>
@@ -350,7 +357,7 @@
                                                         <div class="col-md-6">
                                                             <label for="monthly_budget">Quel est votre budget mensuel pour votre feu de cuisine ?</label> 
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="monthly_budget" v-model="formData.monthly_budget" required>
+                                                                <select class="form-control" id="monthly_budget" v-model="monthly_budget" >
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Entre 5000 Fcfa et 8000 Fcfa">Entre 5000 Fcfa et 8000 Fcfa</option>
                                                                     <option value="Entre 8000 Fcfa et 15000 Fcfa">Entre 8000 Fcfa et 15000 Fcfa</option>
@@ -361,7 +368,7 @@
                                                         <div class="col-md-6">
                                                             <label for="biogas_pack_interest">Seriez-vous susceptible d’acheter le pack complet pour produire votre propre gaz à un prix subventionné ?</label> 
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="biogas_pack_interest" v-model="formData.biogas_pack_interest" required>
+                                                                <select class="form-control" id="biogas_pack_interest" v-model="biogas_pack_interest" >
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Non">Non</option>
                                                                     <option value="Oui">Oui</option>
@@ -394,19 +401,18 @@
             data() {
               return {
                 showStep1: true,
-                showStep2: false,
-                showStep3: false,
-                formData: {
-                  last_name: '',
-                  first_name: '',
-                  birth_date: '',
-                  phone: '',
-                  sex: '',
-                  category: '',
-                  status: '',
-                  area: '', 
-                  household_size: '',
-                  vegetables_in_diet: '',
+                showStep2: true,
+                showStep3: true,
+                  last_name: 'john',
+                  first_name: 'lucas',
+                  birth_date: '1992/12/02',
+                  phone: '96222',
+                  sex: 'M',
+                  category: 'Artisan',
+                  status: 'Locataire',
+                  area: '1', 
+                  household_size: 'Entre 1 et 2 personnes',
+                  vegetables_in_diet: 'Oui',
                   vegetable_list: '',
                   land_space: '',
                   alternative_space: '',
@@ -427,7 +433,6 @@
                   cooking_frequency: '',
                   monthly_budget: '', 
                   biogas_pack_interest: ''
-                }
               };
             },
             methods: {
@@ -444,15 +449,26 @@
                 this.showStep3 = true;
               },
               submit() {
-                axios.post('http://127.0.0.1/2a2d/api/script.php?action=newSurvey', this.formData)
-                .then(response => {
-                    console.log('Survey submitted successfully:', response.data);
-                    alert('success');
-                })
-                .catch(error => {
-                    console.error('There was an error submitting the survey:', error);
-                    alert('failure');
-                });
+                const formData = new FormData();
+                formData.append('first_name', this.first_name);
+                formData.append('last_name', this.last_name);
+                formData.append('birth_date', this.birth_date);
+                formData.append('sex', this.sex);
+                formData.append('area', this.area);
+                formData.append('phone', this.phone);
+                formData.append('category', this.category);
+                formData.append('status', this.status);
+                formData.append('household_size', this.household_size);
+                formData.append('vegetables_in_diet', this.vegetables_in_diet);
+                formData.append('vegetable_list', this.vegetable_list);
+
+                axios.post('http://127.0.0.1/2a2d/api/script.php?action=newSurvey', formData)
+                     .then(response => {
+                    alert('Done !');
+                    })
+                    .catch(error => {
+                    console.error('Form submission error', error);
+                    });
               }
             }
           });

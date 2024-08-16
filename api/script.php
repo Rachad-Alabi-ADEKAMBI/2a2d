@@ -15,6 +15,10 @@ if ($action == 'newsletters') {
     newsletters();
  }
 
+ if ($action == 'surveys') {
+    surveys();
+ }
+
 if($action == 'logout'){
     logout();
 }

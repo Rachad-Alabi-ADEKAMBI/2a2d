@@ -77,6 +77,17 @@
                             alert('Failed to fetch datas');
                         });
                 },
+                displaySurveys() {
+                    axios.get('api/script.php?action=surveys')
+                        .then((response) => {
+                            console.log(response.data);
+                            this.details = response.data;
+                        })
+                        .catch((error) => {
+                            console.error(error);
+                            alert('Failed to fetch datas');
+                        });
+                },
                  formatDate(date) {
     const [year, month, day] = date.split('-');
     return `${day}-${month}-${year}`;
