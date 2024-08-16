@@ -13,7 +13,7 @@
             <div class="col-sm-12 mt-1 text-center">
                 <div class="menu">
         
-                    <button class="btn btn-primary m-2" @click="displayUsers()">
+                    <button class="btn btn-primary m-2" @click="displayNewsletters()">
                         <i class="bi bi-people"></i> <i class="bi bi-users"></i> Користувачі
                     </button>
                 </div>
@@ -22,8 +22,9 @@
         end menu-->
 
         <!--newsletters-->
-                <div class="col-sm-12 col-md-8 text-center mx-auto">
-                        <h2 class="mt-2">
+            <div class="" v-if="showNewsletters">
+            <div class="col-sm-12 col-md-8 text-center mx-auto">
+                        <h2 class="">
                         Liste des emails newsletters
                         </h2>
                     <div class="mt-3 table-container">
@@ -46,7 +47,39 @@
                     </div>
 
                 </div>
+            </div>
         <!--end newsletters-->
+
+        <!--surveys-->
+        <div class="" v-if="showSurveys">
+        <div class="col-sm-12 col-md-8 text-center mx-auto">
+            <h2 class="">
+                Liste des prospects
+            </h2>
+                    <div class="mt-3 table-container">
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date d'inscription</th>
+                                        <th scope="col">Nom complet</th>
+                                        <th scope="col">Contact</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="detail in details" :key="detail.id">
+                                        <td data-label="Date"> {{ (detail.date_of_insertion) }}</td>
+                                        <td data-label="Nom complet"> {{ detail.first_name }} {{ detail.last_name }} </td>
+                                        <td data-label="Contact"> {{ detail.phone }} </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+        </div>
+        </div>
+        <!--end surveys-->
 
 
     </section>
@@ -63,10 +96,10 @@
                 details: []
             },
             mounted() {
-                this.displayEmails();
+                this.displaySurveys();
             },
             methods: {
-                displayEmails() {
+                displayNewsletters() {
                     axios.get('api/script.php?action=newsletters')
                         .then((response) => {
                             console.log(response.data);
@@ -74,10 +107,11 @@
                         })
                         .catch((error) => {
                             console.error(error);
-                            alert('Failed to fetch datas');
                         });
                 },
                 displaySurveys() {
+                    this.showNewsletters = false;
+                    
                     axios.get('api/script.php?action=surveys')
                         .then((response) => {
                             console.log(response.data);
@@ -85,13 +119,12 @@
                         })
                         .catch((error) => {
                             console.error(error);
-                            alert('Failed to fetch datas');
                         });
                 },
                  formatDate(date) {
-    const [year, month, day] = date.split('-');
-    return `${day}-${month}-${year}`;
-}
+                    const [year, month, day] = date.split('-');
+                    return `${day}-${month}-${year}`;
+                }
            },
         });
 </script>
