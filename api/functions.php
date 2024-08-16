@@ -67,16 +67,16 @@ function newSurvey() {
         // Prepare the SQL statement
         $sql = $pdo->prepare('INSERT INTO survey (
             last_name, first_name, birth_date, sex, area, phone, category, status,
-            household_size, vegetables_in_diet, vegetable_list
+            household_size, vegetables_in_diet, vegetable_list, land_space, alternative_space
         ) VALUES (
             ?, ?, ?, ?, ?, ?, ?, ?,
-            ?, ?, ?
+            ?, ?, ?, ?, ?
         );');
 
         // Execute the statement with parameters
         $sql->execute([
             $last_name, $first_name, $birth_date, $sex, $area, $phone, $category, $status,
-            $household_size, $vegetables_in_diet, $vegetable_list
+            $household_size, $vegetables_in_diet, $vegetable_list, $land_space, $alternative_space
         ]);
 
         echo '<script>

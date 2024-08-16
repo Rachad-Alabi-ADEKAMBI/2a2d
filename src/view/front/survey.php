@@ -413,8 +413,8 @@
                   area: '1', 
                   household_size: 'Entre 1 et 2 personnes',
                   vegetables_in_diet: 'Oui',
-                  vegetable_list: '',
-                  land_space: '',
+                  vegetable_list: 'Pommes de terre, Carottes',
+                  land_space: 'Oui',
                   alternative_space: '',
                   space_size: '',
                   space_observation: '',
@@ -461,6 +461,8 @@
                 formData.append('household_size', this.household_size);
                 formData.append('vegetables_in_diet', this.vegetables_in_diet);
                 formData.append('vegetable_list', this.vegetable_list);
+                formData.append('land_space', this.land_space);
+                formData.append('alternative_space', this.alternative_space);
 
                 axios.post('http://127.0.0.1/2a2d/api/script.php?action=newSurvey', formData)
                      .then(response => {

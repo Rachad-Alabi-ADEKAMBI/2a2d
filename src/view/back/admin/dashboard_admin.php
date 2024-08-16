@@ -91,8 +91,8 @@
                                                 <td data-label="Date"> {{ (detail.date_of_insertion) }}</td>
                                                 <td data-label="Nom complet"> {{ capitalizeFirstLetter(detail.first_name) }} {{ capitalize(detail.last_name) }} </td>
                                                 <td data-label="Contact"> {{ detail.phone }} </td>
-                                                <td data-label="Contact"> 
-                                                     <button class="btn btn-info" @click="displayUser">
+                                                <td data-label=""> 
+                                                     <button class="btn btn-info" @click="displayUser(detail.id)">
                                                         Détails
                                                     </button>
                                                 </td>
@@ -139,6 +139,11 @@
                                                 <td data-label="Date"> {{ (detail.date_of_insertion) }}</td>
                                                 <td data-label="Nom complet"> {{ capitalizeFirstLetter(detail.first_name) }} {{ capitalize(detail.last_name) }} </td>
                                                 <td data-label="Contact"> {{ detail.phone }} </td>
+                                                <td data-label=""> 
+                                                     <button class="btn btn-info" @click="displayUser(detail.id)">
+                                                        Détails
+                                                    </button>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -159,15 +164,41 @@
             <div class="row">
                 <div class="col-md-8 col-sm-12 mx-auto">
                     <card class="card">
-                        <h4>
+                        <h4 class="text text-center pt-1">
                             Fiche prospect
                         </h4>
-
-                        <p>
                            <ul>
-                            <li> Nom et prénoms: <span>2222</span></li>
+                            <li> Nom et prénoms: <strong>{{ capitalizeFirstLetter(selectedDetail.first_name)}}
+                                {{ capitalize(selectedDetail.last_name)}}</strong>
+                            </li>
+                            <li>Date de naissance: <strong>{{selectedDetail.birth_date}}</strong> </li>
+                            <li>Sexe: <strong>{{ selectedDetail.sex }}</strong></li>
+                            <li> Numéro de téléphone: <strong>{{selectedDetail.phone}}</strong> </li>
+                            <li>Arrondissement: <strong>{{ selectedDetail.area }}</strong> </li>
+
+                            <hr>
+
+                            <li>
+                                Catégorie socio-professionnelle: <strong>{{selectedDetail.category}}</strong>
+                            </li>
+                            <li>Statut: <strong>{{selectedDetail.status}}</strong></li>
+                            <li>Nombre de personnes au foyer: <strong>{{selectedDetail.household_size}}</strong></li>
+                            <li>Les légumes font-ils partie de votre alimentation de base ?: <strong>{{selectedDetail.vegetables_in_diet }}</strong></li>
+                            <li v-if="selectedDetail.vegetable_list != ''">Liste des légumes: <strong>{{ selectedDetail.vegetable_list }}</strong></li>
+
+
                            </ul>
-                        </p>
+
+                           <br>
+                           <div class="buttons mx-auto text-center" v-if="showUser">
+                            <button class="btn btn-primary">
+                                Imprimer fiche
+                            </button>
+
+                            <button class="btn btn-primary">
+                                Télécharger fiche en PDF
+                            </button>
+                        </div>
                     </card>
                 </div>
             </div>
@@ -256,7 +287,8 @@
                             console.error(error);
                         });
                 },
-                displayUser(){
+                displayUser(id){
+                    this.selectedDetail = this.details.find(detail => detail.id === id);
                     this.showNewsletters = false;
                     this.showSurveys = false;
                     this.showUser = true;
