@@ -30,7 +30,13 @@ function subscribe() {
 function newSurvey() {
     // Assuming `getConnexion()` returns a PDO instance connected to your database
     $pdo = getConnexion();
-    
+
+    // Check if the connection was successful
+    if ($pdo === null) {
+        http_response_code(500);
+        return json_encode(['status' => 'error', 'message' => 'Database connection failed']);
+    }
+
     // Sanitize and retrieve input values
     $last_name = verifyInput($_POST['last_name']);
     $first_name = verifyInput($_POST['first_name']);
@@ -74,10 +80,8 @@ function newSurvey() {
         ) VALUES (
             ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
         )';
-        
+
         $stmt = $pdo->prepare($sql);
-        
-        // Execute the statement with bound parameters
         $stmt->execute([
             $last_name, $first_name, $phone, $birth_date, $sex, $category, $status, $area,
             $household_size, $vegetables_in_diet, $vegetable_list, $land_space, $alternative_space,
@@ -86,12 +90,15 @@ function newSurvey() {
             $gardening_tools, $tools_list, $weekly_hours, $objectives, $composting, $cooking_fuel,
             $cooking_frequency, $monthly_budget, $biogas_pack_interest
         ]);
-        
+
+        http_response_code(200); // Return HTTP status 200 for success
         return json_encode(['status' => 'success']);
     } catch (PDOException $e) {
+        http_response_code(500); // Return HTTP status 500 for internal server error
         return json_encode(['status' => 'error', 'message' => $e->getMessage()]);
     }
 }
+
 
 
 function newsletters() {
