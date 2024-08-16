@@ -16,7 +16,7 @@
                         Newsletters
                     </button>
 
-                    <button class="btn btn-primary m-2" @click="displayNewsletters()">
+                    <button class="btn btn-primary m-2" @click="displaySurveys()">
                          Prospects
                     </button>
                 </div>
@@ -32,17 +32,6 @@
                         </h2>
                     <div class="mt-3 table-container">
                         <div class="table-responsive">
-                            <div class="table-search">
-                            <div class="search-menu right r-0">
-                                <input type="search" v-model="searchKey" @input="handleInput">
-                                <span class="ml-2 open" v-if="!isSearching">
-                                <i class="bi bi-search"></i>
-                                </span>
-                                <span @click="clearSearch" class="close" v-if="isSearching">
-                                <i class="bi bi-x"></i>
-                                </span>
-                            </div>
-                            </div>
                             <table class="table table-dark">
                                 <thead>
                                     <tr>
@@ -71,6 +60,17 @@
                     Liste des prospects
                 </h2>
                         <div class="mt-3 table-container">
+                        <div class="table-search">
+                                <div class="search-menu right r-0">
+                                    <input type="search" v-model="searchKey" @input="handleInput">
+                                    <span class="ml-2 open" v-if="!isSearching">
+                                    <i class="bi bi-search"></i>
+                                    </span>
+                                    <span @click="clearSearch" class="close" v-if="isSearching">
+                                    <i class="bi bi-x"></i>
+                                    </span>
+                                </div>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table table-dark">
                                     <thead>
@@ -83,7 +83,7 @@
                                     <tbody>
                                         <tr v-for="detail in details" :key="detail.id">
                                             <td data-label="Date"> {{ (detail.date_of_insertion) }}</td>
-                                            <td data-label="Nom complet"> {{ detail.first_name }} {{ detail.last_name }} </td>
+                                            <td data-label="Nom complet"> {{ capitalizeFirstLetter(detail.first_name) }} {{ capitalize(detail.last_name) }} </td>
                                             <td data-label="Contact"> {{ detail.phone }} </td>
                                         </tr>
                                     </tbody>
@@ -158,6 +158,7 @@
                 showNewsletters: false,
                 showSurveys: false,
                 showUser: false,
+                showFiltered: false,
                 details: [],
                 currentPage: 1,
                 itemsPerPage: 2,
