@@ -33,7 +33,7 @@
             <div class="" v-if="showNewsletters">
                 <div class="col-sm-12 col-md-8 text-center mx-auto">
                         <h3 class=" text text-secondary">
-                        Liste des emails newsletters
+                        Liste des emails newsletters <span>({{details.length}})</span>
                         </h3>
                     <div class="mt-3 table-container">
                         <div class="table-responsive">
@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-8 text-center mx-auto">
                     <h3 class="text text-secondary" v-if="showSurveys">
-                        Liste des prospects
+                        Liste des prospects ({{details.length}})
                     </h3>
                             <div class="mt-3 table-container" v-if="showSurveys || showFiltered">
                                 <div class="table-responsive">
@@ -122,11 +122,11 @@
             <div class="row" v-if="showFiltered">
                 <div class="col-sm-12 col-md-8 text-center mx-auto mt-2">
                     <h3 class="text text-secondary">
-                        Résultats de la recherche
+                        Résultats de la recherche ({{filteredResults.length}})
                     </h3>
                             <div class="mt-3 table-container" v-if="showFiltered && filteredResults.length > 0">
                                 <div class="table-responsive">
-                                    <table class="table table-dark table-striped"  v-if="showSurveys">
+                                    <table class="table table-dark table-striped">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Date d'inscription</th>
@@ -163,15 +163,16 @@
         <div class="container" v-if="showUser">
             <div class="row">
                 <div class="col-md-8 col-sm-12 mx-auto">
-                    <card class="card">
-                        <h4 class="text text-center pt-1">
+                    <card class="card pb-2 pt-2">
+                        <h4 class="text text-center">
                             Fiche prospect
                         </h4> 
                         <hr>
-                        <h5>
+
+                           <ul>
+                           <h5>
                             Informations générales
                         </h5>
-                           <ul>
                             <li> Nom et prénoms: <strong>{{ capitalizeFirstLetter(selectedDetail.first_name)}}
                                 {{ capitalize(selectedDetail.last_name)}}</strong>
                             </li>
@@ -194,17 +195,37 @@
                             <li>Disposez-vous d’un espace vide en pleine terre aménageable en potager ?: <strong>{{ selectedDetail.land_space }}</strong></li>
                             <li v-if="selectedDetail.alternative_space =='Oui'" >Si non, avez-vous des espaces où vous pourrez entreposer des
                              sacs potagers pour une culture verticale ?: <strong>{{ selectedDetail.alternative_space }}</strong></li>
-                            <li>Surface en m2: <strong>{{ selectedDetail.space.size }}</strong></li>
-
-                           </ul>
-
+                            <li>Surface en m2: <strong>{{ selectedDetail.space_size }}</strong></li>
+                            <li>Observation: <strong>{{ selectedDetail.space_observation }}</strong></li>
+                            <li>Connaissez vous l’importance nutritionnelle des légumes dans un régime alimentaire ?: <strong>{{ selectedDetail.vegetables_in_diet }}</strong></li>
+                            <li>Si oui, lesquels consommez vous ?: <strong>{{selectedDetail.vegetable_list}}</strong></li>
+                            <li>Seriez-vous intéressé(e) pour produire des fruits et légumes frais pour votre consommation ?: <strong>{{selectedDetail.interested_in_production}}</strong></li>
+                            <li>Seriez-vous intéressé(e) par une installation d’un potager biologique sur cet espace vide ?: <strong>{{selectedDetail.interested_in_installation}}</strong> </li>
+                            <li>Avez-vous du temps libre pour vous occuper d’un potager ?: <strong>{{selectedDetail.available_time}}</strong></li>
+                            <li>Comment gérez-vous vos déchets organiques domestiques ?: <strong>{{selectedDetail.waste_management}}</strong></li>
+                            <li>Diriez-vous que vous êtes: <strong>{{selectedDetail.gardener_experience}}</strong></li>
+                            <li>Disposez-vous d’un outillage en matière d’entretien de potager ?: <strong>{{selectedDetail.gardening_tools}}</strong></li>
+                            <li v-if="selectedDetail.tools_list !=''">Liste des outils: <strong>{{selectedDetail.tools_list}}</strong></li>
+                            <li>Par semaine, de combien d’heures disposez-vous pour jardiner ?: <strong>{{ selectedDetail.weekly_hours }}</strong></li>
+                            <li>Quels peuvent être vos objectifs ?: <strong>{{ selectedDetail.objectives }}</strong></li>
+                            <li>Connaissez-vous le compostage ?: <strong>{{selectedDetail.composting}}</strong></li>
+                           <hr>
+                           <h5>
+                            Volet biogaz
+                           </h5>
+                           <li>Par quel moyen faites-vous du feu pour cuisiner ?: <strong>{{selectedDetail.cooking_fuel}}</strong></li>
+                           <li>Quelle est votre fréquence en termes de cuisine ?: <strong>{{ selectedDetail.cooking_frequency }}</strong></li>
+                           <li>Quel est votre budget mensuel pour votre feu de cuisine ?: <strong>{{selectedDetail.monthly_budget}}</strong></li>
+                           <li>Seriez-vous susceptible d’acheter le pack complet pour produire votre propre gaz à un prix subventionné ?: <strong>{{selectedDetail.biogas_pack_interest}}</strong></li>
+                           
+                            </ul>
                            <br>
                            <div class="buttons mx-auto text-center" v-if="showUser">
-                            <button class="btn btn-primary">
+                            <button class="btn btn-primary m-1">
                                 Imprimer fiche
                             </button>
 
-                            <button class="btn btn-primary">
+                            <button class="btn btn-primary m-1">
                                 Télécharger fiche en PDF
                             </button>
                         </div>
