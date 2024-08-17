@@ -88,7 +88,7 @@
                                         </thead>
                                         <tbody>
                                             <tr v-for="detail in details" :key="detail.id">
-                                                <td data-label="Date"> {{ (detail.date_of_insertion) }}</td>
+                                                <td data-label="Date"> {{ formatNewDate(detail.date_of_insertion) }}</td>
                                                 <td data-label="Nom complet"> {{ capitalizeFirstLetter(detail.first_name) }} {{ capitalize(detail.last_name) }} </td>
                                                 <td data-label="Contact"> {{ detail.phone }} </td>
                                                 <td data-label=""> 
@@ -106,13 +106,9 @@
             </div>
 
             <div class="buttons mx-auto text-center" v-if="showSurveys">
-                <button class="btn btn-primary">
-                    Imprimer
-                </button>
-
-                <button class="btn btn-primary">
-                    Télécharger en PDF
-                </button>
+                    <button class="btn btn-primary m-1" onClick="window.print();">
+                                Imprimer / Télécharger
+                    </button>
             </div>
         </div>
         <!--end surveys-->
@@ -136,7 +132,7 @@
                                         </thead>
                                         <tbody>
                                             <tr v-for="detail in filteredResults" :key="detail.id">
-                                                <td data-label="Date"> {{ (detail.date_of_insertion) }}</td>
+                                                <td data-label="Date"> {{ formatNewDate(detail.date_of_insertion) }}</td>
                                                 <td data-label="Nom complet"> {{ capitalizeFirstLetter(detail.first_name) }} {{ capitalize(detail.last_name) }} </td>
                                                 <td data-label="Contact"> {{ detail.phone }} </td>
                                                 <td data-label=""> 
@@ -176,11 +172,11 @@
                             <li> Nom et prénoms: <strong>{{ capitalizeFirstLetter(selectedDetail.first_name)}}
                                 {{ capitalize(selectedDetail.last_name)}}</strong>
                             </li>
-                            <li>Date de naissance: <strong>{{selectedDetail.birth_date}}</strong> </li>
+                            <li>Date de naissance: <strong>{{formatNewDate(selectedDetail.birth_date)}}</strong> </li>
                             <li>Sexe: <strong>{{ selectedDetail.sex }}</strong></li>
                             <li> Numéro de téléphone: <strong>{{selectedDetail.phone}}</strong> </li>
                             <li>Arrondissement: <strong>{{ selectedDetail.area }}</strong> </li>
-                            <li>Date de remplissage: <strong>{{ selectedDetail.date_of_insertion }}</strong></li>
+                            <li>Date de remplissage: <strong>{{ formatNewDate(selectedDetail.date_of_insertion) }}</strong></li>
 
                             <hr>
                             <h5>Volet Potager</h5>
@@ -221,13 +217,10 @@
                             </ul>
                            <br>
                            <div class="buttons mx-auto text-center" v-if="showUser">
-                            <button class="btn btn-primary m-1">
-                                Imprimer fiche
+                            <button class="btn btn-primary m-1" onClick="window.print();">
+                                Imprimer / Télécharger
                             </button>
 
-                            <button class="btn btn-primary m-1">
-                                Télécharger fiche en PDF
-                            </button>
                         </div>
                     </card>
                 </div>
@@ -322,10 +315,20 @@
                     this.showNewsletters = false;
                     this.showSurveys = false;
                     this.showUser = true;
+                    this.showFiltered = false;
                 },
                  formatDate(date) {
                     const [year, month, day] = date.split('-');
                     return `${day}-${month}-${year}`;
+                },
+                formatNewDate(inputDate) {
+                    // Remplacer les tirets par des slashes pour uniformiser le format
+                    let dateParts = inputDate.replace(/-/g, '/').split('/');
+
+                    // Réorganiser les parties de la date : jour, mois, année
+                    let formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
+
+                    return formattedDate;
                 },
                 handleInput() {
                 this.isSearching = this.searchKey.length > 0;

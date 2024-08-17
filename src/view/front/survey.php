@@ -15,55 +15,57 @@
                                                 <div v-if="showStep1">
                                                     <h2>Informations générales</h2>
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="name" class="text-white">Nom</label> 
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
                                                                 <input type="text" class="form-control" id="name"
-                                                                v-model="last_name" placeholder="Nom" >
+                                                                v-model="last_name" placeholder="Nom" required >
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="first_name">Prénom</label> 
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
                                                                 <input type="text" class="form-control" id="first_name" 
-                                                                v-model="first_name" placeholder="Prénom" >
+                                                                v-model="first_name" placeholder="Prénom" required>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
-                                                            <label for="phone" class="text-white">Téléphone:</label> 
+                                                        <div class="col-md-6 p-2">
+                                                            <label for="phone" class="text-white">Téléphone</label> 
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
-                                                                <input type="number" class="form-control" id="phone" v-model='phone' placeholder="Numero de telephone" >
+                                                                <input type="number" class="form-control" id="phone" 
+                                                                required v-model='phone' placeholder="Numero de telephone" >
                                                             </div>
                                                         </div>
 
-                                                        <div class="col-md-6">
-                                                            <label for="area" class="text-white">Arrondissement:</label> 
+                                                        <div class="col-md-6 p-2">
+                                                            <label for="area" class="text-white">Arrondissement</label> 
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
-                                                                <input type="number" class="form-control" id="area" v-model="area" placeholder="Arrondissement" >
+                                                                <input type="number" class="form-control" id="area" 
+                                                                   required v-model="area" placeholder="Arrondissement" >
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="birth_date" class="text-white">Votre date de naissance</label> 
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
-                                                                <input type="date" class="form-control" id="birth_date" 
+                                                                <input type="date" class="form-control" id="birth_date" required
                                                                 v-model="birth_date" >
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="sex">Votre sexe</label> 
                                                             <span class="text-danger">*</span>
                                                             <div class="form-floating">
-                                                                <select class="form-control" id="sex" v-model="sex" >
+                                                                <select class="form-control" id="sex" v-model="sex" required>
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="M">Masculin</option>
                                                                     <option value="F">Féminin</option>
@@ -71,18 +73,21 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <button type="button" class="btn btn-primary mt-3" @click="displayStep2">Suivant</button>
                                                 </div>
+                                                <hr>
 
                                                 <!-- Step 2 -->
-                                                <div v-if="showStep2">
-                                                    <h2>Step N°1 : POTAGER BIO</h2>
+                                                <div v-if="showStep2" class="mt-2">
+                                                    <h2>Volet N°1 : POTAGER BIO</h2>
                                                     <p>
-                                                        Ce formulaire a pour but de recenser des foyers pour bénéficier d’un projet de revalorisation de leurs déchets domestiques...
+                                                    Ce formulaire a pour but de recenser des foyers pour bénéficier d’un projet de
+                                                     revalorisation de leurs déchets domestiques. Ce volet du projet a pour but de permettre 
+                                                     aux foyers bénéficiaires de revaloriser 
+                                                    leurs déchets domestiques en engrais biologique pour fertiliser leur potager.
                                                     </p>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="category" class="text-white">Catégorie socio-professionnelle</label> 
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="category" v-model="category" >
@@ -100,7 +105,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="status">Êtes-vous locataire ou propriétaire ?</label> 
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="status" v-model="status" >
@@ -113,7 +118,7 @@
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="household_size">Combien de personnes constituent votre foyer ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="household_size" v-model="household_size">
@@ -124,7 +129,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="vegetables_in_diet">Les légumes font-ils partie de votre alimentation de base ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="vegetables_in_diet" v-model="vegetables_in_diet">
@@ -148,7 +153,7 @@
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="land_space">Disposez-vous d’un espace vide en pleine terre aménageable en potager ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="land_space" v-model="land_space">
@@ -158,7 +163,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6" v-if="land_space === 'Non'">
+                                                        <div class="col-md-6 p-2" v-if="land_space === 'Non'">
                                                             <label for="alternative_space">Si non, avez-vous des espaces où vous pourrez entreposer des sacs potagers pour une culture verticale ?</label>
                                                             <div class="form-floating">
                                                                  <select class="form-control" id="alternative_space"
@@ -173,7 +178,7 @@
 
                                                     <div v-if="land_space === 'Oui'">
                                                             <div class="row g-3">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-6 p-2">
                                                                     <label for="space_size">Si oui, quelle est la surface en m² dont vous disposez ?</label>
                                                                     <div class="form-floating">
                                                                         <select class="form-control" id="space_size" v-model="space_size">
@@ -185,7 +190,7 @@
                                                                         </select>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-6 p-2">
                                                                     <label for="space_observation">Observation (espace nu ou cimenté) :</label>
                                                                     <div class="form-floating">
                                                                         <input type="text" class="form-control" id="space_observation" v-model='space_observation' placeholder="Description de espace">
@@ -195,7 +200,7 @@
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="nutritional_importance">Connaissez vous l’importance nutritionnelle des légumes dans un régime alimentaire ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="nutritional_importance" v-model="nutritional_importance">
@@ -205,7 +210,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="interested_in_production">Seriez-vous intéressé(e) pour produire des fruits et légumes frais pour votre consommation ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="interested_in_production" v-model="interested_in_production">
@@ -219,7 +224,7 @@
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="interested_in_installation">Seriez-vous intéressé(e) par une installation d’un potager biologique sur cet espace vide ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="interested_in_installation" v-model="interested_in_installation">
@@ -230,8 +235,8 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <label for="available_time">Avez-vous du temps libre pour vous occuper d’un potager ?</label>
+                                                        <div class="col-md-6 p-2">
+                                                             <label for="available_time">Avez-vous du temps libre <br> pour vous occuper <br> d’un potager ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="available_time" v-model="available_time">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
@@ -243,7 +248,7 @@
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="waste_management">Comment gérez-vous vos déchets organiques domestiques ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="waste_management" v-model="waste_management">
@@ -254,8 +259,8 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <label for="gardener_experience">Diriez-vous que vous êtes</label>
+                                                        <div class="col-md-6 p-2">
+                                                            <label for="gardener_experience">Diriez-vous que <br> vous êtes</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="gardener_experience" v-model="gardener_experience">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
@@ -268,7 +273,7 @@
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="gardening_tools">Disposez-vous d’un outillage en matière d’entretien de potager ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="gardening_tools" v-model="gardening_tools">
@@ -284,7 +289,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="weekly_hours">Par semaine, de combien d’heures disposez-vous pour jardiner ?</label>
                                                             <div class="form-floating">
                                                                 <input type="number" class="form-control" id="weekly_hours" v-model="weekly_hours" placeholder="Nombre d’heures par semaine">
@@ -293,7 +298,7 @@
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="objectives">Quels peuvent être vos objectifs ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="objectives" v-model="objectives">
@@ -304,7 +309,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="composting">Connaissez-vous le compostage ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="composting" v-model="composting">
@@ -317,19 +322,16 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="buttons mt-3">
-                                                        <button class="btn btn-info"  @click="displayStep1">Précédent</button>
-                                                        <button class="btn btn-primary" @click="displayStep3">Suivant</button>
-                                                    </div>
                                                 </div>
+                                                <hr>
 
                                                 <!-- Step 3 -->
-                                                <div v-if="showStep3">
-                                                    <h3>Step No2 : Production de Biogaz</h3>
+                                                <div v-if="showStep3" class="mt-2">
+                                                    <h3>Volet No2 : Production de Biogaz</h3>
                                                         <p>Le second volet du projet consiste à aider les ménages intéressés à assurer leur autosuffisance en biogaz pour leur besoin domestique. En fonction de la quantité de déchets organiques produits par les ménages, on pourra déterminer la faisabilité et l’exécution du projet. Certains ménages qui le souhaitent pourront produire leur gaz ou l’acheter directement à la coopérative.</p>
                                                     
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="cooking_fuel">Par quel moyen faites-vous du feu pour cuisiner ?</label> 
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="cooking_fuel" v-model="cooking_fuel" >
@@ -340,7 +342,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="cooking_frequency">Quelle est votre fréquence en termes de cuisine ?</label> 
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="cooking_frequency" v-model="cooking_frequency" >
@@ -354,8 +356,8 @@
                                                     </div>
 
                                                     <div class="row g-3">
-                                                        <div class="col-md-6">
-                                                            <label for="monthly_budget">Quel est votre budget mensuel pour votre feu de cuisine ?</label> 
+                                                        <div class="col-md-6 p-2">
+                                                            <label for="monthly_budget">Quel est votre <br> budget mensuel pour <br> votre feu de cuisine ?</label> 
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="monthly_budget" v-model="monthly_budget" >
                                                                     <option value="" disabled>Veuillez sélectionner</option>
@@ -365,7 +367,7 @@
                                                                 </select>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-6 p-2">
                                                             <label for="biogas_pack_interest">Seriez-vous susceptible d’acheter le pack complet pour produire votre propre gaz à un prix subventionné ?</label> 
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="biogas_pack_interest" v-model="biogas_pack_interest" >
@@ -378,7 +380,6 @@
                                                     </div>
 
                                                     <div class="buttons mt-3">
-                                                        <button class="btn btn-info" type="button" @click="displayStep2">Précédent</button>
                                                         <button class="btn btn-primary" type="submit">Soumettre</button>
                                                     </div>
                                                 </div>
@@ -480,9 +481,10 @@
                 formData.append('monthly_budget', this.monthly_budget);
                 formData.append('biogas_pack_interest', this.biogas_pack_interest);
 
-                axios.post('http://127.0.0.1/2a2d/api/script.php?action=newSurvey', formData)
+                axios.post('api/script.php?action=newSurvey', formData)
                      .then(response => {
-                    alert('Done !');
+                    alert('Formulaire sauvegardé avec succès, nous vous recontacterons !');
+                    window.location.replace('#')
                     })
                     .catch(error => {
                     console.error('Form submission error', error);
