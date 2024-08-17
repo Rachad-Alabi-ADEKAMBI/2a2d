@@ -166,7 +166,11 @@
                     <card class="card">
                         <h4 class="text text-center pt-1">
                             Fiche prospect
-                        </h4>
+                        </h4> 
+                        <hr>
+                        <h5>
+                            Informations générales
+                        </h5>
                            <ul>
                             <li> Nom et prénoms: <strong>{{ capitalizeFirstLetter(selectedDetail.first_name)}}
                                 {{ capitalize(selectedDetail.last_name)}}</strong>
@@ -175,8 +179,10 @@
                             <li>Sexe: <strong>{{ selectedDetail.sex }}</strong></li>
                             <li> Numéro de téléphone: <strong>{{selectedDetail.phone}}</strong> </li>
                             <li>Arrondissement: <strong>{{ selectedDetail.area }}</strong> </li>
+                            <li>Date de remplissage: <strong>{{ selectedDetail.date_of_insertion }}</strong></li>
 
                             <hr>
+                            <h5>Volet Potager</h5>
 
                             <li>
                                 Catégorie socio-professionnelle: <strong>{{selectedDetail.category}}</strong>
@@ -185,7 +191,10 @@
                             <li>Nombre de personnes au foyer: <strong>{{selectedDetail.household_size}}</strong></li>
                             <li>Les légumes font-ils partie de votre alimentation de base ?: <strong>{{selectedDetail.vegetables_in_diet }}</strong></li>
                             <li v-if="selectedDetail.vegetable_list != ''">Liste des légumes: <strong>{{ selectedDetail.vegetable_list }}</strong></li>
-
+                            <li>Disposez-vous d’un espace vide en pleine terre aménageable en potager ?: <strong>{{ selectedDetail.land_space }}</strong></li>
+                            <li v-if="selectedDetail.alternative_space =='Oui'" >Si non, avez-vous des espaces où vous pourrez entreposer des
+                             sacs potagers pour une culture verticale ?: <strong>{{ selectedDetail.alternative_space }}</strong></li>
+                            <li>Surface en m2: <strong>{{ selectedDetail.space.size }}</strong></li>
 
                            </ul>
 

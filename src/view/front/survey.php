@@ -196,7 +196,7 @@
 
                                                     <div class="row g-3">
                                                         <div class="col-md-6">
-                                                            <label for="nutritional_importance">Connaissent-ils l’importance nutritionnelle des légumes dans un régime alimentaire ?</label>
+                                                            <label for="nutritional_importance">Connaissez vous l’importance nutritionnelle des légumes dans un régime alimentaire ?</label>
                                                             <div class="form-floating">
                                                                 <select class="form-control" id="nutritional_importance" v-model="nutritional_importance">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
@@ -211,7 +211,7 @@
                                                                 <select class="form-control" id="interested_in_production" v-model="interested_in_production">
                                                                     <option value="" disabled>Veuillez sélectionner</option>
                                                                     <option value="Oui je suis intéressé">Oui je suis intéressé</option>
-                                                                    <option value="Oui mais je vais y réfléchir">Oui mais je vais y réfléchir</option>
+                                                                    <option value="Non mais je vais y réfléchir">Non mais je vais y réfléchir</option>
                                                                     <option value="Non">Non</option>
                                                                 </select>
                                                             </div>
@@ -403,8 +403,8 @@
                 showStep1: true,
                 showStep2: true,
                 showStep3: true,
-                  last_name: 'john',
-                  first_name: 'lucas',
+                  last_name: 'jokl',
+                  first_name: 'lytyug',
                   birth_date: '1992/12/02',
                   phone: '96222',
                   sex: 'M',
@@ -416,21 +416,21 @@
                   vegetable_list: 'Pommes de terre, Carottes',
                   land_space: 'Oui',
                   alternative_space: '',
-                  space_size: '',
-                  space_observation: '',
-                  nutritional_importance: '',
-                  interested_in_production: '',
-                  interested_in_installation: '',
-                  available_time: '',
-                  waste_management: '',
-                  gardener_experience: '',
-                  gardening_tools: '',
-                  tools_list: '',
-                  weekly_hours: '',
-                  objectives: '',
-                  composting: '',
-                  cooking_fuel: '',
-                  cooking_frequency: '',
+                  space_size: 'de 4 à 6 m2',
+                  space_observation: 'Espace nu',
+                  nutritional_importance: 'Oui',
+                  interested_in_production: 'Oui je suis intéressé',
+                  interested_in_installation: 'Oui c’est possible',
+                  available_time: 'Oui',
+                  waste_management: 'Je les déverse dans les poubelles sans trier',
+                  gardener_experience: 'Jardinier ou maraicher ayant une petite expérience',
+                  gardening_tools: 'Oui',
+                  tools_list: 'Pelle, Rateau, Arrosoir',
+                  weekly_hours: '2',
+                  objectives: 'Voir ce que ça donne.',
+                  composting: 'Oui',
+                  cooking_fuel: 'Gaz',
+                  cooking_frequency: 'Deux fois par jour',
                   monthly_budget: '', 
                   biogas_pack_interest: ''
               };
@@ -463,6 +463,22 @@
                 formData.append('vegetable_list', this.vegetable_list);
                 formData.append('land_space', this.land_space);
                 formData.append('alternative_space', this.alternative_space);
+                formData.append('space_size', this.space_size);
+                formData.append('space_observation', this.space_observation);
+                formData.append('nutritional_importance', this.nutritional_importance);
+                formData.append('interested_in_production', this.interested_in_production);
+                formData.append('interested_in_installation', this.interested_in_installation);
+                formData.append('available_time', this.available_time);
+                formData.append('waste_management', this.waste_management);
+                formData.append('gardener_experience', this.gardener_experience);
+                formData.append('gardening_tools', this.gardening_tools);
+                formData.append('tools_list', this.tools_list);
+                formData.append('objectives', this.objectives);
+                formData.append('composting', this.composting);
+                formData.append('cooking_fuel', this.cooking_fuel);
+                formData.append('cooking_frequency', this.cooking_frequency);
+                formData.append('monthly_budget', this.monthly_budget);
+                formData.append('biogas_pack_interest', this.biogas_pack_interest);
 
                 axios.post('http://127.0.0.1/2a2d/api/script.php?action=newSurvey', formData)
                      .then(response => {
