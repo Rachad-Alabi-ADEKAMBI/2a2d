@@ -15,6 +15,10 @@ if ($action == 'newsletters') {
     newsletters();
 }
 
+if ($action == 'contact') {
+    contact();
+}
+
 if ($action == 'surveys') {
     surveys();
 }

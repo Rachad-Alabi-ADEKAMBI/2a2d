@@ -5,7 +5,7 @@ function getConnexion()
 {
     try {
         return new PDO(
-            'mysql:host=sql307.infinityfree.com;dbname=ongadcom_2a2d;charset=UTF8',
+            'mysql:host=localhost:3306;dbname=ongadcom_2a2d;charset=UTF8',
             'ongadcom_root ',
             'D4Pj&ofxAbng8oLu'
         );

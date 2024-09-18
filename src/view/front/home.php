@@ -1,6 +1,6 @@
-<?php 
+<?php
 $title = "ONG 2A2D - Organisation Non Gouvernementale d'Actions Africaine pour le Développement Durable (ONG 2A2D)";
-ob_start(); 
+ob_start();
 ?>
 <section class='section'>
     <div class="">
@@ -20,7 +20,7 @@ ob_start();
                             <div class="seven">D</div>
                         </h1>
                         <p class="text text-white fw-bold">
-                        Organisation Non Gouvernementale d'Actions Africaine pour le Développement Durable (ONG 2A2D)
+                            Organisation Non Gouvernementale d'Actions Africaine pour le Développement Durable (ONG 2A2D)
                         </p>
                         <a class="btn btn-primary" href="index.php?action=contactPage">
                             Contact
@@ -77,10 +77,10 @@ ob_start();
                     <h2>A-propos</h2>
                     <div>
                         <p class="text-left">
-                        L'ONG 2A2D est une organisation dévouée à la transformation sociale et au développement durable, 
-                        axée sur l'amélioration des conditions de vie des communautés défavorisées. Nous croyons en un avenir
-                         où chaque individu a la possibilité de s'épanouir, indépendamment de son contexte socio-économique ...
-                          
+                            L'ONG 2A2D est une organisation dévouée à la transformation sociale et au développement durable,
+                            axée sur l'amélioration des conditions de vie des communautés défavorisées. Nous croyons en un avenir
+                            où chaque individu a la possibilité de s'épanouir, indépendamment de son contexte socio-économique ...
+
                         </p>
 
                         <a href="index.php?action=aboutPage"
@@ -98,7 +98,7 @@ ob_start();
         <!-- End About -->
 
         <!-- Services -->
-                <div class="container pt-3">
+        <div class="container pt-3">
             <h2 class="text-center">
                 Une Expérience Impactante
             </h2>
@@ -173,117 +173,126 @@ ob_start();
                         Partenaires Locaux
                     </p>
                 </div>
-                </div>
             </div>
         </div>
+    </div>
 
-        <!-- End Clients -->
+    <!-- End Clients -->
 
-        <!-- projects -->
-        <div class="container mt-5 blog" id="blog">
-            <h2 class="text-center">
-                Nos Projets
-            </h2>
-            <p class="text-center">
-                Découvrez nos projets récents qui illustrent notre engagement pour 
-                un développement durable et une amélioration des conditions de vie des
-                 communautés. Ces initiatives démontrent notre détermination à faire une
-                  différence concrète.
-            </p>
-            <div class="row blog__items mt-3">
-                <div class="col-sm-12 col-md-6 mb-3">
-                    <div class="blog__items__item">
-                        <img src="public/images/biogaz2.jpg" alt="ong 2a2d">
-                        <h4>
-                            Potager bio et biogaz au service de l'environnement 
-                        </h4>
-                        <p class="text-left mt-4">
-                            Ce projet vise à promouvoir l'agriculture durable et la production de biogaz en utilisant des techniques respectueuses de l'environnement. Nous mettons en place des potagers bio pour améliorer l'autosuffisance alimentaire et réduire les déchets organiques.
-                        </p>
-                        <a href="index.php?action=projectPage&id=1" class="btn btn-primary mx-auto mt-4">
-                            En savoir plus
-                        </a>
-                        <div class="date text-center pt-1">
-                            <i class="bi bi-calendar"></i> <br>
-                            <p>
+    <!-- projects -->
+    <div class="container mt-5 blog" id="blog">
+        <h2 class="text-center">
+            Nos Projets
+        </h2>
+        <p class="text-center">
+            Découvrez nos projets récents qui illustrent notre engagement pour
+            un développement durable et une amélioration des conditions de vie des
+            communautés. Ces initiatives démontrent notre détermination à faire une
+            différence concrète.
+        </p>
+        <div class="row blog__items mt-3">
+            <div class="col-sm-12 col-md-6 mb-3">
+                <div class="blog__items__item">
+                    <img src="public/images/biogaz2.jpg" alt="ong 2a2d">
+                    <h4>
+                        Potager bio et biogaz au service de l'environnement
+                    </h4>
+                    <p class="text-left mt-4">
+                        Ce projet vise à promouvoir l'agriculture durable et la production de biogaz en utilisant des techniques respectueuses de l'environnement. Nous mettons en place des potagers bio pour améliorer l'autosuffisance alimentaire et réduire les déchets organiques.
+                    </p>
+                    <a href="index.php?action=projectPage&id=1" class="btn btn-primary mx-auto mt-4">
+                        En savoir plus
+                    </a>
+                    <div class="date text-center pt-1">
+                        <i class="bi bi-calendar"></i> <br>
+                        <p>
                             Août 2024 <br> - <br> Août 2025
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 mb-3">
-                    <div class="blog__items__item">
-                        <img src="public/images/maillots.jpg" alt="ong 2a2d">
-                        <h4>
-                        Don de Maillots de football
-                        </h4>
-                        <p class="text-left mt-4">
-                        L'ONG 2A2D est fière d'avoir soutenu l'équipe de football d'Avotrou en leur
-                         offrant de nouveaux maillots. Ce don s'inscrit dans notre engagement à
-                          promouvoir le développement local à travers le sport, un vecteur 
-                          essentiel d'unité et de progrès pour notre communauté.
                         </p>
-                        <a href="index.php?action=projectPage&id=3" class="btn btn-primary mx-auto mt-4">
-                            En savoir plus
-                        </a>
-                        <div class="date text-center pt-1">
-                            <i class="bi bi-calendar"></i> 
-                            <p>
-                            Août 2023 <br>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="" id="contact"></div>
-        </div>
-
-        <!-- End projets -->
-
-        <!-- Contact -->
-        <div class="container mt-5" id='contact'>
-            <div class="form">
-                <h2 class="text-center">
-                    Contact
-                </h2>
-                <form class="row g-3 pt-2">
-                    <div class="col-md-6">
-                    <label for="name" class="text-white">Votre nom</label> <span class="red">*</span>
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="name" placeholder="Votre nom">
-                        </div>
+            <div class="col-sm-12 col-md-6 mb-3">
+                <div class="blog__items__item">
+                    <img src="public/images/maillots.jpg" alt="ong 2a2d">
+                    <h4>
+                        Don de Maillots de football
+                    </h4>
+                    <p class="text-left mt-4">
+                        L'ONG 2A2D est fière d'avoir soutenu l'équipe de football d'Avotrou en leur
+                        offrant de nouveaux maillots. Ce don s'inscrit dans notre engagement à
+                        promouvoir le développement local à travers le sport, un vecteur
+                        essentiel d'unité et de progrès pour notre communauté.
+                    </p>
+                    <a href="index.php?action=projectPage&id=3" class="btn btn-primary mx-auto mt-4">
+                        En savoir plus
+                    </a>
+                    <div class="date text-center pt-1">
+                        <i class="bi bi-calendar"></i>
+                        <p>
+                            Août 2023 <br>
+                        </p>
                     </div>
-                    <div class="col-md-6">
-                        <label for="email">Votre email</label> <span class="red">*</span>
-                        <div class="form-floating">
-                            <input type="email" class="form-control" id="email" placeholder="Votre email">
-                        </div>
-                    </div>
-                    <div class="col-12 mt-2">
-                    <label for="subject">Objet</label> <span class="red">*</span>
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="subject" placeholder="Objet">
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3">
-                    <label for="message">Message</label> <span class="red">*</span>
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Your message" id="message" 
-                            style="height: 150px"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-3 text-center">
-                        <button type="submit" class="btn btn-primary">
-                            Envoyer
-                        </button>
-                    </div>
-                </form>
+                </div>
             </div>
-       </div>
+        </div>
+        <div class="" id="contact"></div>
+    </div>
 
-        <!-- End Contact -->
+    <!-- End projets -->
+
+    <!-- Contact -->
+    <div class="container mt-5" id='contact'>
+        <div class="form">
+            <h2 class="text-center">
+                Contact
+            </h2>
+            <form class="row g-3 pt-2" method="POST" action="api/script.php?action=contact">
+                <div class="col-md-6">
+                    <label for="name" class="text-white">Votre nom</label> <span class="red">*</span>
+                    <div class="form-floating">
+                        <input type="text" name="fullname" class="form-control" id="name" placeholder="Votre nom">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email">Votre email</label> <span class="red">*</span>
+                    <div class="form-floating">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Votre email">
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <label for="subject">Objet</label> <span class="red">*</span>
+                    <div class="form-floating">
+                        <input type="text" name="subject" class="form-control" id="subject" placeholder="Objet">
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <label for="message">Message</label> <span class="red">*</span>
+                    <div class="form-floating">
+                        <textarea class="form-control" name="message" placeholder="Your message" id="message"
+                            style="height: 150px"></textarea>
+                    </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <input type="checkbox" required>
+                    <label for="">
+                        J'accepte que ces informations soient stockées pour le traitement de mon message
+                        conformément aux <a href="index.php?action=termsPage">CGU</a>.
+                    </label>
+                </div>
+                <div class="col-12 mt-3 text-center">
+                    <button type="submit" class="btn btn-primary">
+                        Envoyer
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- End Contact -->
     </div>
 </section>
 <?php $content = ob_get_clean(); ?>
+
 
 <?php require './src/view/layout.php'; ?>

@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Load Composer's autoloader if using Composer
+require 'vendor/autoload.php';
+
+
 include 'db.php';
 
 function subscribe()
@@ -187,10 +194,92 @@ function login()
             alert('Identifiants incorrects !');
             window.history.back();
         </script>
-<?php
+        <?php
     }
 }
 
+function contact()
+{
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_GET['action'] === 'contact') {
+        // Sanitize input to prevent XSS and other security issues
+        $fullname = htmlspecialchars(trim($_POST['fullname']));
+        $email = htmlspecialchars(trim($_POST['email']));
+        $subject = htmlspecialchars(trim($_POST['subject']));
+        $message = htmlspecialchars(trim($_POST['message']));
+
+        // Validate required fields
+        if (empty($fullname) || empty($email) || empty($subject) || empty($message)) {
+            echo 'Tous les champs avec une * sont obligatoires.';
+            return;
+        }
+
+        // Validate email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo 'Veuillez entrer une adresse email valide.';
+            return;
+        }
+
+        // Create a new PHPMailer instance
+        $mail = new PHPMailer(true);
+
+        try {
+            //Server settings
+            $mail->isSMTP();                                      // Send using SMTP
+            $mail->Host = 'smtp.example.com';                     // Set the SMTP server to send through
+            $mail->SMTPAuth = true;                               // Enable SMTP authentication
+            $mail->Username = 'your_smtp_username';               // SMTP username
+            $mail->Password = 'your_smtp_password';               // SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;   // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+            $mail->Port = 587;                                    // TCP port to connect to
+
+            //Recipients
+            $mail->setFrom($email, $fullname);                    // Sender's email and name
+            $mail->addAddress('adekambirachad@gmail.com');             // Add the recipient
+
+            // Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = 'Contact Form - ' . $subject;
+            $mail->Body    = "
+            <h3>Vous avez reçu un nouveau message via le formulaire de contact.</h3>
+            <p><strong>Nom:</strong> $fullname</p>
+            <p><strong>Email:</strong> $email</p>
+            <p><strong>Objet:</strong> $subject</p>
+            <p><strong>Message:</strong><br>$message</p>
+        ";
+            $mail->AltBody = "
+            Vous avez reçu un nouveau message via le formulaire de contact.\n
+            Nom: $fullname\n
+            Email: $email\n
+            Objet: $subject\n
+            Message:\n$message
+        ";
+
+            // Send the email
+            if ($mail->send()) {
+        ?>
+                <script>
+                    alert("Votre message a bien été envoyé.");
+                    //  window.history.back();
+                </script>
+            <?php
+            } else {
+            ?>
+                <script>
+                    alert("Erreur lors de l\'envoi du message. Merci de réessayer plus tard.");
+                    // window.history.back();
+                </script>
+            <?php
+            }
+        } catch (Exception $e) {
+            ?>
+            <script>
+                alert("Erreur lors de l\'envoi du message. Veuillez réessayer plus tard.");
+                // window.history.back();
+            </script>
+<?php
+        }
+    }
+}
 
 
 function logout()
