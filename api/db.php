@@ -5,9 +5,9 @@ function getConnexion()
 {
     try {
         return new PDO(
-            'mysql:host=sql307.infinityfree.com;dbname=if0_37074155_2a2d;charset=UTF8',
-            'if0_37074155',
-            'Jep4h9xYoBkO'
+            'mysql:host=sql307.infinityfree.com;dbname=ongadcom_2a2d;charset=UTF8',
+            'ongadcom_root ',
+            'D4Pj&ofxAbng8oLu'
         );
     } catch (PDOException $e) {
         // Handle database connection error
