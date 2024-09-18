@@ -1,6 +1,18 @@
 <?php
+// Start session at the beginning
+session_start();
 
-echo 'ok';
+// Check if the user is not logged in (i.e., if $_SESSION['login'] does not exist)
+if (!isset($_SESSION['user'])) {
+?>
+    <script>
+        alert('Veuillez vous connecter d\'abord');
+        window.location.replace('index.php?action=loginPage');
+    </script>
+<?php
+    // Exit to stop further execution of the script after the redirect
+    exit();
+}
 
 $title = "ong 2A2D - Tableau de bord admin";
 
@@ -96,7 +108,7 @@ ob_start(); ?>
                                     <td data-label="Nom complet"> {{ capitalizeFirstLetter(detail.first_name) }} {{ capitalize(detail.last_name) }} </td>
                                     <td data-label="Contact"> {{ detail.phone }} </td>
                                     <td data-label="">
-                                        <button class="btn btn-info" @click="displayUser(detail.id)">
+                                        <button class="btn btn-info" style="cursor: pointer;" @click="displayUser(detail.id)">
                                             Détails
                                         </button>
                                     </td>
@@ -107,12 +119,6 @@ ob_start(); ?>
                 </div>
 
             </div>
-        </div>
-
-        <div class="buttons mx-auto text-center" v-if="showSurveys">
-            <button class="btn btn-primary m-1" onClick="window.print();">
-                Imprimer / Télécharger
-            </button>
         </div>
     </div>
     <!--end surveys-->
@@ -140,7 +146,7 @@ ob_start(); ?>
                                     <td data-label="Nom complet"> {{ capitalizeFirstLetter(detail.first_name) }} {{ capitalize(detail.last_name) }} </td>
                                     <td data-label="Contact"> {{ detail.phone }} </td>
                                     <td data-label="">
-                                        <button class="btn btn-info" @click="displayUser(detail.id)">
+                                        <button class="btn btn-info" style="cursor: pointer;" @click="displayUser(detail.id)">
                                             Détails
                                         </button>
                                     </td>
@@ -220,12 +226,6 @@ ob_start(); ?>
 
                     </ul>
                     <br>
-                    <div class="buttons mx-auto text-center" v-if="showUser">
-                        <button class="btn btn-primary m-1" onClick="window.print();">
-                            Imprimer / Télécharger
-                        </button>
-
-                    </div>
                 </card>
             </div>
         </div>
@@ -249,7 +249,7 @@ ob_start(); ?>
             showFiltered: false,
             details: [],
             currentPage: 1,
-            itemsPerPage: 2,
+            itemsPerPage: 10,
             searchKey: '',
             isSearching: false,
             selectedDetail: null,

@@ -23,7 +23,7 @@ function subscribe()
             alert('Une erreur est survenue, merci de réessayer');
             window.history.back();
         </script>
-<?php
+        <?php
     }
 }
 
@@ -160,21 +160,19 @@ function login()
     $req->execute(array($email));
     $user = $req->fetch(PDO::FETCH_ASSOC);
 
-    var_dump($email);
-    /*
-
     if ($user) {
         // Verify the password using bcrypt
         if (password_verify($password, $user['password'])) {
             session_start();
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_email'] = $user['email'];
-
-            // Redirect to dashboard or user area
+            // start a session called user
+            $_SESSION['user'] = [
+                'user_id' => $user['id']
+            ];
             header("Location: ../index.php?action=dashboard_adminPage");
             exit();
         } else {
-            // Incorrect password
+            $_SESSION['login']['email'] = $email;
+
         ?>
             <script>
                 alert('Identifiants incorrects !');
@@ -183,15 +181,14 @@ function login()
         <?php
         }
     } else {
-        // User not found
+        $_SESSION['login']['email'] = $email;
         ?>
         <script>
-            alert('Identifiants incorrect !');
+            alert('Identifiants incorrects !');
             window.history.back();
         </script>
 <?php
     }
-    */
 }
 
 

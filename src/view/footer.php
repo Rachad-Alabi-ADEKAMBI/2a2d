@@ -34,7 +34,13 @@
                  <li><a href="index.php?action=projectsPage">Projets</a></li>
                  <li><a href="index.php?action=teamPage">Equipe</a></li>
                  <li><a href="index.php?action=home#contact">Contact</a></li>
-                 <li><a href="index.php?action=loginPage">Connexion</a></li>
+                 <?php
+                    if (isset($_SESSION['user'])) { ?>
+                     <li><a href="index.php?action=dashboard_adminPage">Tableau de bord</a></li>
+                     <li><a href="api/script.php?action=logout">Déconnexion</a></li>
+                 <?php } else { ?>
+                     <li><a href="index.php?action=loginPage">Connexion</a></li>
+                 <?php } ?>
              </ul>
          </div>
 
