@@ -30,14 +30,14 @@ require_once 'src/controller/front/survey.php';
 if (isset($_GET['action']) && $_GET['action'] !== '') {
 
   if ($_GET['action'] === 'loginPage') {
-    if (isset($_SESSION['user'])) {
+    /* if (isset($_SESSION['user'])) {
       dashboard_adminPage();
     } else {
       loginPage();
     }
-  }
-
-  if ($_GET['action'] === 'registerPage') {
+      */
+    loginPage();
+  } elseif ($_GET['action'] === 'registerPage') {
     registerPage();
   } elseif ($_GET['action'] === 'teamPage') {
     teamPage();
