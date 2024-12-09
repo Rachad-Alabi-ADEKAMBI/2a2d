@@ -67,6 +67,13 @@
 </section>
 
 
+<style>
+    label {
+  color: black;
+}
+</style>
+
+
 <?php $content = ob_get_clean(); ?>
 
 <?php require './src/view/layout.php'; ?>
