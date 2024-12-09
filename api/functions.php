@@ -200,6 +200,7 @@ function login()
 
 function register()
 {
+  
     // Establish database connection
     $pdo = getConnexion();
 
@@ -207,6 +208,9 @@ function register()
     $email = verifyInput($_POST['email']);
     $password = verifyInput($_POST['password']);
     $confirmPassword = verifyInput($_POST['confirm_password']);
+
+
+   // echo $email.' '.$password;
 
     // Check if passwords match
     if ($password !== $confirmPassword) {
@@ -245,7 +249,7 @@ function register()
         ?>
         <script>
             alert('Inscription réussie ! Veuillez vous connecter.');
-            window.location.href = '../index.php?action=login';
+            window.location.href = '../index.php?action=loginPage';
         </script>
         <?php
     } else {

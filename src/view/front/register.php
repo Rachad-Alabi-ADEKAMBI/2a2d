@@ -3,113 +3,69 @@
 // $articles
 
  ob_start(); ?>
-    <section class='section' id='app' >
-        <h1 class="text-center">
-            Devenir client
-        </h1>
+    
+    <section class='section'>
+    <div class="container">
+        <div class="row g-0 gx-5 align-items-end">
+            <div class="col-sm-12 col-md-7 mt-4 mx-auto">
+                <div class="bg-dark mt-5 border pt-5 p-3 rounded p-sm-5 wow">
+                    <form action="api/script.php?action=register" method="POST">
+                        <h1 class="mx-auto text-center">Inscription</h1>
 
-        <!--upload files-->
-        <div class="col-sm-12 col-md-7 mt-4 mx-auto">
-                <div class="bg-white border rounded wow p-3">
-                    <form action="api/script.php?action=register" method="POST" 
-                                    enctype='multipart/form-data'>
-                                        <span class="ml-0" >
-                                            <i class="fa fa-times me-3 text-blue"></i>
-                                        </span>
+                        <div class="row g-3">
+                            <!-- Email Input -->
+                            <div class="col-sm-12">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control"
+                                        required name='email' value="<?= $_SESSION['register']['email'] ?? '' ?>" placeholder="Votre email">
+                                    <label for="email">Email <span class="red">*</span></label>
+                                </div>
+                            </div>
 
-                                        <h1 class="mx-auto text-center">Devenir client</h1>
+                            <!-- Password Input -->
+                            <div class="col-sm-12">
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" required name='password' id=""
+                                        placeholder="Mot de passe">
+                                    <label for="password">Mot de passe <span class="red">*</span></label>
+                                </div>
+                            </div>
 
-                                        <h2 class="mt-3">
-                                            Données personnelles
-                                        </h2>
-                                       <div class="row g-3">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" required name='first_name' 
-                                                    placeholder="Nom">
-                                                    <label for="first_name">Prénoms<span class="red">*</span> </label>
-                                                </div>
-                                            </div>
+                            <!-- Confirm Password Input -->
+                            <div class="col-sm-12">
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" required name='confirm_password' id=""
+                                        placeholder="Confirmez le mot de passe">
+                                    <label for="confirm_password">Confirmez le mot de passe <span class="red">*</span></label>
+                                </div>
+                            </div>
+                        </div>
 
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" required name='last_name' placeholder="last_name">
-                                                    <label for="last_name">Nom:<span class="red">*</span> </label>
-                                                </div>
-                                            </div>
+                        <!-- Submit Button -->
+                        <div class="row g-3 mt-4">
+                            <div class="col-sm-12 col-md-6 mx-auto text-center">
+                                <button class="btn btn-primary w-100 py-3" type="submit">
+                                    Inscription
+                                </button>
+                                <br>
+                            </div>
+                        </div>
 
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" required name='email' 
-                                                    placeholder="Email">
-                                                    <label for="email">Email:<span class="red">*</span> </label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" required name='nif'
-                                                    placeholder="nif">
-                                                    <label for="nif">NIF:<span class="red">*</span> </label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" required name='phone'
-                                                    placeholder="nif">
-                                                    <label for="nif">Numéro de téléphone:<span class="red">*</span> </label>
-                                                </div>
-                                            </div>
-                                       </div>
-
-                                       <hr>
-
-                                       <h2>
-                                         Installation d'approvisionnement en gaz
-                                       </h2>
-
-                                       <div class="row g-3">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" required name='eic'
-                                                    placeholder="eic">
-                                                    <label for="eic">Code EIC:<span class="red">*</span> </label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" required name='eic'
-                                                    placeholder="eic">
-                                                    <label for="eic">Opérateur de chronométrage:<span class="red">*</span> </label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-sm-12 col-md-6 mt-2">
-                                                <div class="form-floating">
-                                                    <input type="text" class="form-control" required name='eic'
-                                                    placeholder="eic">
-                                                    <label for="eic">Opérateur de chronométrage:<span class="red">*</span> </label>
-                                                </div>
-                                            </div>
-                                       </div>
-                                        
-                                       <div class="row g-3 mt-4">
-                                            <div class="col-sm-12 col-md-4 mx-auto text-center">
-                                                <button class="btn btn-success w-100 py-3 mb-3" type="submit">Inscription</button>
-                                            </div>
-                                        </div>
-                                      
-                                   </div>
-
-                                    
+                        <!-- Link to Login -->
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-12 text-center">
+                                <a href="login.php" class="text-decoration-none text-light">
+                                    Déjà un compte ? Connectez-vous
+                                </a>
+                            </div>
+                        </div>
                     </form>
                 </div>
+            </div>
         </div>
-        <!--end upload-->
+    </div>
+</section>
 
-    </section>
 
 <?php $content = ob_get_clean(); ?>
 

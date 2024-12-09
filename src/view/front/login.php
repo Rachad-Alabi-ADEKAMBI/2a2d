@@ -16,7 +16,7 @@ ob_start(); ?>
                                 <div class="form-floating">
                                     <input type="text" class="form-control"
                                         required name='email' value="<?= $_SESSION['login']['email'] ?>" placeholder="">
-                                    <label for="name">Identifiant <span class="red">*</span></label>
+                                    <label for="name">Email <span class="red">*</span></label>
                                 </div>
                             </div>
 
