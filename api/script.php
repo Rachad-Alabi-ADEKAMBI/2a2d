@@ -27,6 +27,10 @@ if ($action == 'login') {
     login();
 }
 
+if ($action == 'register') {
+    register();
+}
+
 if ($action == 'logout') {
     logout();
 }

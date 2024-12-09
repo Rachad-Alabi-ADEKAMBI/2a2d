@@ -40,6 +40,7 @@
                      <li><a href="api/script.php?action=logout">Déconnexion</a></li>
                  <?php } else { ?>
                      <li><a href="index.php?action=loginPage">Connexion</a></li>
+                     <li><a href="index.php?action=registerPage">Inscription</a></li>
                  <?php } ?>
              </ul>
          </div>

@@ -198,6 +198,67 @@ function login()
     }
 }
 
+function register()
+{
+    // Establish database connection
+    $pdo = getConnexion();
+
+    // Retrieve and sanitize input
+    $email = verifyInput($_POST['email']);
+    $password = verifyInput($_POST['password']);
+    $confirmPassword = verifyInput($_POST['confirm_password']);
+
+    // Check if passwords match
+    if ($password !== $confirmPassword) {
+        ?>
+        <script>
+            alert('Les mots de passe ne correspondent pas !');
+            window.history.back();
+        </script>
+        <?php
+        exit();
+    }
+
+    // Check if the email is already registered
+    $req = $pdo->prepare("SELECT * FROM users WHERE email = ?");
+    $req->execute(array($email));
+    $user = $req->fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+        ?>
+        <script>
+            alert('Cet email est déjà enregistré !');
+            window.history.back();
+        </script>
+        <?php
+        exit();
+    }
+
+    // Hash the password using bcrypt
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+    // Insert the new user into the database with the default role as 'user'
+    $insert = $pdo->prepare("INSERT INTO users (email, password, role) VALUES (?, ?, ?)");
+    $isInserted = $insert->execute(array($email, $hashedPassword, 'user'));
+
+    if ($isInserted) {
+        ?>
+        <script>
+            alert('Inscription réussie ! Veuillez vous connecter.');
+            window.location.href = '../index.php?action=login';
+        </script>
+        <?php
+    } else {
+        ?>
+        <script>
+            alert('Une erreur s\'est produite lors de l\'inscription. Veuillez réessayer.');
+            window.history.back();
+        </script>
+        <?php
+    }
+}
+
+
 function contact()
 {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_GET['action'] === 'contact') {
