@@ -26,17 +26,27 @@ ob_start(); ?>
 
     <!--menu-->
     <div class="row">
-        <div class="col-sm-12 mt-1 text-center">
+        <div class="col-sm-12 col-md-8 mx-auto mt-1 text-center">
             <div class="menu">
                 <div class="options">
-                    <form>
+                    <form class="form">
                         <label for="newRadio" class="ml-5">
                             <input type="radio" id="newRadio" name="options" @click="displayNewsletters()">
                             Newsletters
                         </label>
                         <label for="allRadio" class="ml-5">
                             <input type="radio" id="allRadio" name="options" @click="displaySurveys()">
-                            Prospects
+                            Ménages
+                        </label>
+
+                        <label for="allRadio" class="ml-5">
+                            <input type="radio" id="allRadio" name="options" @click="displayTeams()">
+                            Equipes
+                        </label>
+
+                        <label for="allRadio" class="ml-5">
+                            <input type="radio" id="allRadio" name="options" @click="displayReports()">
+                            Rapports
                         </label>
                     </form>
                 </div>

@@ -376,6 +376,15 @@ a:hover {
   color: #EA4033;
 }
 
+.menu .options .form {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
+}
+
 .footer {
   background-color: rgb(33, 37, 41);
   color: white;

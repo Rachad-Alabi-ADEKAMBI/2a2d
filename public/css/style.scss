@@ -6,6 +6,7 @@ $wheat: #F9F9F9;
 $black: black;
 $grey: rgb(33, 37, 41); 
 $grey-dark: rgb(20, 24, 28);
+
 @mixin flex($flex-direction: row) {
   display: flex;
   justify-content: start;
@@ -432,6 +433,17 @@ a {
   }
 }
 
+
+.menu{
+
+  .options{
+    .form{
+      @include flex();
+      margin: auto;
+      justify-content: space-between;
+    }
+  }
+}
 
 
 
