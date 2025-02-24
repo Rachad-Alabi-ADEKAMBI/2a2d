@@ -16,11 +16,11 @@
                  </li>
 
                  <li>
-                     <i class="bi bi-phone"></i> +229 40 40 85 87
+                     <i class="bi bi-phone"></i> +229 01 40 40 85 87
                  </li>
 
                  <li>
-                     <i class="bi bi-whatsapp"></i> +229 96 83 16 26
+                     <i class="bi bi-whatsapp"></i> +229 01 96 83 16 26
                  </li>
              </ul>
          </div>
