@@ -13,26 +13,25 @@ include 'db.php';
 function subscribe()
 {
     $pdo = getConnexion();
-    $email = verifyInput($_POST['email']);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+
+    // Validate email
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('Adresse email invalide'); window.history.back();</script>";
+        exit;
+    }
 
     try {
         $req = $pdo->prepare('INSERT INTO newsletters (email) VALUES (?)');
         $req->execute([$email]);
-?>
-        <script>
-            alert('Email ajouté avec succès');
-            window.history.back();
-        </script>
-    <?php
+
+        echo "<script>alert('Email ajouté avec succès'); window.history.back();</script>";
     } catch (PDOException $e) {
-    ?>
-        <script>
-            alert('Une erreur est survenue, merci de réessayer');
-            window.history.back();
-        </script>
-        <?php
+        echo "<script>alert('Une erreur est survenue, merci de réessayer'); window.history.back();</script>";
     }
+    exit;
 }
+
 
 
 function newSurvey()
@@ -146,13 +145,24 @@ function surveys()
 function newsletters()
 {
     $pdo = getConnexion();
-    $req = $pdo->prepare("SELECT * FROM newsletters ORDER BY id DESC");
+    $req = $pdo->prepare("
+        SELECT n1.*
+        FROM newsletters n1
+        JOIN (
+            SELECT email, MAX(id) AS max_id
+            FROM newsletters
+            WHERE email IS NOT NULL
+            GROUP BY email
+        ) n2 ON n1.email = n2.email AND n1.id = n2.max_id
+        ORDER BY n1.id DESC
+    ");
     $req->execute();
-    $datas = $req->fetchAll();
+    $datas = $req->fetchAll(PDO::FETCH_ASSOC);
     $req->closeCursor();
 
     sendJSON($datas);
 }
+
 
 function login()
 {
@@ -180,7 +190,7 @@ function login()
         } else {
             $_SESSION['login']['email'] = $email;
 
-        ?>
+?>
             <script>
                 alert('Identifiants incorrects !');
                 window.history.back();
@@ -194,13 +204,13 @@ function login()
             alert('Identifiants incorrects !');
             window.history.back();
         </script>
-        <?php
+    <?php
     }
 }
 
 function register()
 {
-  
+
     // Establish database connection
     $pdo = getConnexion();
 
@@ -210,16 +220,16 @@ function register()
     $confirmPassword = verifyInput($_POST['confirm_password']);
 
 
-   // echo $email.' '.$password;
+    // echo $email.' '.$password;
 
     // Check if passwords match
     if ($password !== $confirmPassword) {
-        ?>
+    ?>
         <script>
             alert('Les mots de passe ne correspondent pas !');
             window.history.back();
         </script>
-        <?php
+    <?php
         exit();
     }
 
@@ -229,12 +239,12 @@ function register()
     $user = $req->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-        ?>
+    ?>
         <script>
             alert('Cet email est déjà enregistré !');
             window.history.back();
         </script>
-        <?php
+    <?php
         exit();
     }
 
@@ -246,14 +256,14 @@ function register()
     $isInserted = $insert->execute(array($email, $hashedPassword, 'user'));
 
     if ($isInserted) {
-        ?>
+    ?>
         <script>
             alert('Inscription réussie ! Veuillez vous connecter.');
             window.location.href = '../index.php?action=loginPage';
         </script>
-        <?php
+    <?php
     } else {
-        ?>
+    ?>
         <script>
             alert('Une erreur s\'est produite lors de l\'inscription. Veuillez réessayer.');
             window.history.back();
