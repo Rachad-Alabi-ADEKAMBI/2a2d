@@ -16,7 +16,7 @@
                  </li>
 
                  <li>
-                     <i class="bi bi-phone"></i> +229 96 83 16 26
+                     <i class="bi bi-phone"></i> +229 40 40 85 87
                  </li>
 
                  <li>
